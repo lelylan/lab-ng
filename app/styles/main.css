@@ -3843,12 +3843,12 @@ float: left;
 margin-top: 20px;
 margin-left: 30px
 }
-.panelLike .userCardBlankSlate,.panelLike .blankSlate {
+.panelLike .user-cardBlankSlate,.panelLike .blankSlate {
 display: block;
 list-style-type: none;
 height: 0;
 }
-.panelLike .userCardBlankSlate strong,.panelLike .blankSlate strong {
+.panelLike .user-cardBlankSlate strong,.panelLike .blankSlate strong {
 display: block;
 font-size: 28px;
 line-height: 34px
@@ -3879,227 +3879,104 @@ position: relative;
 padding: 20px;
 text-shadow: none
 }
-.userCard {
-padding: 0;
-margin: 0;
-min-height: 190px;
--webkit-box-sizing: border-box;
--moz-box-sizing: border-box;
-box-sizing: border-box;
-text-shadow: none;
+
+/* start lelylan card */
+
+.user-card {
+  padding: 0;
+  margin: 0;
+  min-height: 400px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-shadow: none;
 }
-.userCard :hover {
-cursor: pointer;
+
+.user-card :hover {
+  cursor: pointer;
 }
-.userCard :hover .userCardMenuHandle {
-color: #8d9ec3
+
+.user-card.list-item {
+  margin: 10px 10px 0
 }
-.userCard.list {
-min-height: 220px
+
+.user-card .user-avatar {
+  display: block;
+  width: 250px;
+  height: 100px;
+  -webkit-border-radius: 5px 5px 0 0 ;
+  border-radius-top: 5px 5px 0 0 ;
 }
-.userCard.listItem {
-margin: 10px 10px 0
+
+.user-card.list-item {
+  width: 250px;
+  float: left;
+  max-height: 200px;
+  list-style: none;
+  position: relative;
+  background-color: #fff;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
 }
-.userCard .userCardMenuHandle {
-position: absolute;
-padding-left: 15px;
-left: 0;
-top: 0;
-padding-right: 17px;
-font-family: monospace,sans,sans-serif;
-height: 30px;
-font-size: 2em;
-line-height: 36px;
-cursor: pointer;
-color: #c4cde0;
+
+.user-card.list-item:hover {
+  background-color: #f5f5f5
 }
-.userCard .userCardMenuHandle:hover {
-color: #8d9ec3
+
+.user-card .title {
+  color: #333;
+  font-size: 1.2em;
+  line-height: 1.3em;
+  width: 90%;
+  word-wrap: break-word;
+  padding: 20px 10px 0px;
 }
-.userCard .userAvatar {
-margin: 35px auto 15px auto;
-width: 70px;
-height: 70px;
-overflow: hidden;
-background: transparent;
-display: block;
--webkit-border-radius: 35px;
-border-radius: 35px;
+
+.user-card .tags {
+  font-size: 1em;
+  width: 90%;
+  padding: 0px 10px 0px;
 }
-.userCard .userAvatar img {
-display: block;
-height: 70px;
-width: 70px;
--webkit-border-radius: 35px;
-border-radius: 35px
+
+.user-card .tag:before {
+  content: "#";
 }
-.userCard.listItem {
-width: 180px;
-float: left;
-max-height: 200px;
-list-style: none;
-position: relative;
-background-color: #fff;
--webkit-border-radius: 5px;
-border-radius: 5px;
+
+.user-card .tag,
+.user-card .tag#hover {
+  font-weight: bolder;
+  color: #239cbb;
 }
-.userCard.listItem:hover {
-background-color: #f5f5f5
+
+.user-card .description {
+  color: #666;
+  font-size: .95em;
+  line-height: 1.3em;
+  width: 90%;
+  word-wrap: break-word;
+  padding: 10px;
+  padding-top: 0;
 }
-.userCard .userName {
-display: block;
-width: 90%;
-text-align: center;
-padding-top: 5px;
-margin: 0 auto;
-word-wrap: break-word;
+
+.user-card .link {
+  position: absolute;
+  bottom: 0;
+  color: #239cbb;
+  font-size: 1em;
+  padding: 10px 10px;
+  margin: 0;
+  /*background-color: #e6f6f6;*/
+  /*border-top: 1px solid #D1EAEA;*/
+  /*border-right: 1px solid #D1EAEA;*/
 }
-.userCard .userName .block {
-font-size: 115%
+
+.user-card .link a,
+.user-card .link a:hover {
+  color: #239cbb;
 }
-.userCard .infoIco {
-position: absolute;
-left: 50%;
-color: #c4cde0;
-margin: -34px 0 0 16px;
-top: 65px;
-background-color: #fff;
-font-size: 18px;
-width: 24px;
-height: 24px;
-line-height: 24px;
-text-align: center;
--webkit-border-radius: 12px;
-border-radius: 12px;
-}
-.userCard .infoIco.opposite {
-font-size: 12px;
-line-height: 1;
-background-color: transparent;
-width: 12px;
-height: 12px;
-left: auto;
-right: 15px;
-top: 15px;
-margin: 0
-}
-.userCard .infoIco[title] {
-cursor: help
-}
-.userCard .dropdownLink .isNot {
-display: none
-}
-.userCard > .isAdmin[data-adds*='architect'] .dropdownLink[data-target-role='architect'] .isNot,.userCard > .isMember[data-adds*='architect'] .dropdownLink[data-target-role='architect'] .isNot {
-display: inline
-}
-.userCard .infoIcoRoles {
-position: absolute;
-top: 12px;
-left: 50px;
-right: 50px;
-text-align: center;
-margin: 0
-}
-.userCard .infoIcoRole {
-display: none;
--webkit-border-radius: 1em;
-border-radius: 1em;
-width: 15px;
-height: 15px;
-line-height: 15px;
-color: #87cefa;
-border: 1px solid #87cefa;
-font-size: 11px;
-text-transform: uppercase
-}
-.userCard[data-adds*='architect'] .infoIcoRole[data-for='architect'] {
-display: inline-block
-}
-.userCard .dropdown {
-display: none
-}
-.userCard .fullSize {
-position: absolute;
-left: 0;
-top: 0;
-height: 100%;
-width: 100%;
-color: #008000;
-text-decoration: none;
-text-align: center;
-font-size: 130%;
-font-weight: bold;
-}
-.userCard .fullSize:hover {
-color: #000
-}
-.userCard.userCardMenu {
--webkit-border-radius: 5px;
-border-radius: 5px;
-float: none;
-left: 0;
-list-style-type: none;
-margin: 45px 10px 0 20px;
-max-height: auto;
-min-height: 0;
-overflow: hidden;
-padding: 0;
-opacity: .95;
--ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
-filter: alpha(opacity=95);
-position: absolute;
-top: -500px;
-visibility: visible;
-width: 160px;
-}
-.userCard.userCardMenu.inactiveMenu {
-top: -9999px !important;
-left: 0 !important;
-visibility: hidden
-}
-.userCard.userCardMenu ul {
-list-style-type: none;
-padding: 0;
-margin: 0
-}
-.userCard.userCardMenu a {
-display: block;
-padding: .5em
-}
-.userCard.userCardMenu .isAdmin .removeMember,.userCard.userCardMenu .isAdmin .removeInvite,.userCard.userCardMenu .isAdmin .morphAdmin,.userCard.userCardMenu .isAdmin .resendInvite {
-display: none
-}
-.userCard.userCardMenu .isMember .removeAdmin,.userCard.userCardMenu .isMember .removeInvite,.userCard.userCardMenu .isMember .morphMember,.userCard.userCardMenu .isMember .resendInvite {
-display: none
-}
-.userCard.userCardMenu .isNot {
-display: none
-}
-.userCard.userCardMenu .isAdmin .changeRole,.userCard.userCardMenu .isMember .changeRole {
-display: list-item
-}
-.userCard.userCardMenu .isInvite .changeRole,.userCard.userCardMenu .isInvite .removeAdmin,.userCard.userCardMenu .isInvite .removeMember {
-display: none
-}
-.userCard.userCardMenu .isInvite .resendInvite {
-display: list-item
-}
-.userCard.userCardMenu .inviteAdmin .morphMember {
-display: list-item
-}
-.userCard.userCardMenu .inviteAdmin .morphAdmin {
-display: none
-}
-.userCard.userCardMenu .inviteMember .morphAdmin {
-display: list-item
-}
-.userCard.userCardMenu .inviteMember .morphMember {
-display: none
-}
-.userCard.list {
-width: 100%;
-position: relative
-}
+
+/* end lelylan card */
+
 .peoplePanel .switchByDataAttr,.panelLike .switchByDataAttr {
 position: absolute;
 top: 0;
@@ -4124,14 +4001,14 @@ margin: 0 auto;
 display: block;
 margin-top: 50px
 }
-.peoplePanel .userCardBlankSlate,.panelLike .userCardBlankSlate {
+.peoplePanel .user-cardBlankSlate,.panelLike .user-cardBlankSlate {
 text-align: center;
 margin-left: auto;
 margin-right: auto;
 list-style-type: none;
 margin-top: 50px;
 }
-.peoplePanel .userCardBlankSlate .vIco,.panelLike .userCardBlankSlate .vIco {
+.peoplePanel .user-cardBlankSlate .vIco,.panelLike .user-cardBlankSlate .vIco {
 opacity: .15;
 -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=15)";
 filter: alpha(opacity=15);
@@ -4147,7 +4024,7 @@ transform: scale(5);
 transform-origin: center bottom;
 margin-bottom: 20px;
 }
-.peoplePanel .userCardBlankSlate .vIco.vDocument,.panelLike .userCardBlankSlate .vIco.vDocument {
+.peoplePanel .user-cardBlankSlate .vIco.vDocument,.panelLike .user-cardBlankSlate .vIco.vDocument {
 opacity: .5;
 -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 filter: alpha(opacity=50)
@@ -4837,16 +4714,16 @@ margin: 0
 .overlay .panel.peoplePanel .addPeople,.manageWholeTeam.peoplePanel .addPeople {
 background-color: #f6f6f6
 }
-.overlay .panel.peoplePanel .userCard.list,.manageWholeTeam.peoplePanel .userCard.list {
+.overlay .panel.peoplePanel .user-card.list,.manageWholeTeam.peoplePanel .user-card.list {
 padding: 0 0 10px 20px
 }
-.overlay .panel.peoplePanel .userCard.listItem,.manageWholeTeam.peoplePanel .userCard.listItem {
+.overlay .panel.peoplePanel .user-card.list-item,.manageWholeTeam.peoplePanel .user-card.list-item {
 padding: 0;
 float: left;
 background-color: #fff;
 height: 190px;
 margin: 10px;
-width: 180px;
+width: 250px;
 font-size: 14px;
 -webkit-box-shadow: 0 2px 2px rgba(153,153,153,0.1);
 box-shadow: 0 2px 2px rgba(153,153,153,0.1);
@@ -4871,12 +4748,12 @@ transition-timing-function: ease-in-out;
 -ms-transition-delay: 0;
 transition-delay: 0;
 }
-.overlay .panel.peoplePanel .userCard.listItem.highlightedAsNew,.manageWholeTeam.peoplePanel .userCard.listItem.highlightedAsNew {
+.overlay .panel.peoplePanel .user-card.list-item.highlightedAsNew,.manageWholeTeam.peoplePanel .user-card.list-item.highlightedAsNew {
 background-color: #fffbef;
 -webkit-box-shadow: inset 0 0 1px 1px #ffe28c;
 box-shadow: inset 0 0 1px 1px #ffe28c
 }
-.overlay .panel.peoplePanel .userCard.userCardMenu,.manageWholeTeam.peoplePanel .userCard.userCardMenu {
+.overlay .panel.peoplePanel .user-card.user-cardMenu,.manageWholeTeam.peoplePanel .user-card.user-cardMenu {
 padding: 0;
 opacity: .95;
 -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
@@ -4888,22 +4765,22 @@ background-color: #5d6577;
 box-shadow: none;
 width: 160px;
 }
-.overlay .panel.peoplePanel .userCard.userCardMenu:before,.manageWholeTeam.peoplePanel .userCard.userCardMenu:before {
+.overlay .panel.peoplePanel .user-card.user-cardMenu:before,.manageWholeTeam.peoplePanel .user-card.user-cardMenu:before {
 display: none
 }
-.overlay .panel.peoplePanel .userCard.userCardMenu ul,.manageWholeTeam.peoplePanel .userCard.userCardMenu ul,.overlay .panel.peoplePanel .userCard.userCardMenu li,.manageWholeTeam.peoplePanel .userCard.userCardMenu li {
+.overlay .panel.peoplePanel .user-card.user-cardMenu ul,.manageWholeTeam.peoplePanel .user-card.user-cardMenu ul,.overlay .panel.peoplePanel .user-card.user-cardMenu li,.manageWholeTeam.peoplePanel .user-card.user-cardMenu li {
 padding: 0
 }
-.overlay .panel.peoplePanel .userCard.userCardMenu.inactiveMenu,.manageWholeTeam.peoplePanel .userCard.userCardMenu.inactiveMenu {
+.overlay .panel.peoplePanel .user-card.user-cardMenu.inactiveMenu,.manageWholeTeam.peoplePanel .user-card.user-cardMenu.inactiveMenu {
 display: none
 }
-.overlay .panel.peoplePanel .tabsWrap[data-show="editor"] .userCard[data-role="viewer"],.manageWholeTeam.peoplePanel .tabsWrap[data-show="editor"] .userCard[data-role="viewer"],.overlay .panel.peoplePanel .tabsWrap[data-show="viewer"] .userCard[data-role="editor"],.manageWholeTeam.peoplePanel .tabsWrap[data-show="viewer"] .userCard[data-role="editor"],.overlay .panel.peoplePanel .tabsWrap[data-show="admin"] .userCard[data-role="member"],.manageWholeTeam.peoplePanel .tabsWrap[data-show="admin"] .userCard[data-role="member"],.overlay .panel.peoplePanel .tabsWrap[data-show="member"] .userCard[data-role="admin"],.manageWholeTeam.peoplePanel .tabsWrap[data-show="member"] .userCard[data-role="admin"],.overlay .panel.peoplePanel .tabsWrap[data-show="invite"] .userCard.listItem:not([data-type="Invite"]),.manageWholeTeam.peoplePanel .tabsWrap[data-show="invite"] .userCard.listItem:not([data-type="Invite"]) {
+.overlay .panel.peoplePanel .tabsWrap[data-show="editor"] .user-card[data-role="viewer"],.manageWholeTeam.peoplePanel .tabsWrap[data-show="editor"] .user-card[data-role="viewer"],.overlay .panel.peoplePanel .tabsWrap[data-show="viewer"] .user-card[data-role="editor"],.manageWholeTeam.peoplePanel .tabsWrap[data-show="viewer"] .user-card[data-role="editor"],.overlay .panel.peoplePanel .tabsWrap[data-show="admin"] .user-card[data-role="member"],.manageWholeTeam.peoplePanel .tabsWrap[data-show="admin"] .user-card[data-role="member"],.overlay .panel.peoplePanel .tabsWrap[data-show="member"] .user-card[data-role="admin"],.manageWholeTeam.peoplePanel .tabsWrap[data-show="member"] .user-card[data-role="admin"],.overlay .panel.peoplePanel .tabsWrap[data-show="invite"] .user-card.list-item:not([data-type="Invite"]),.manageWholeTeam.peoplePanel .tabsWrap[data-show="invite"] .user-card.list-item:not([data-type="Invite"]) {
 display: none
 }
 .overlay .panel.peoplePanel .tabsWrap[data-show="all"] .switchByDataAttr[data-role="all"],.manageWholeTeam.peoplePanel .tabsWrap[data-show="all"] .switchByDataAttr[data-role="all"],.overlay .panel.peoplePanel .tabsWrap[data-show="editor"] .switchByDataAttr[data-role="editor"],.manageWholeTeam.peoplePanel .tabsWrap[data-show="editor"] .switchByDataAttr[data-role="editor"],.overlay .panel.peoplePanel .tabsWrap[data-show="viewer"] .switchByDataAttr[data-role="viewer"],.manageWholeTeam.peoplePanel .tabsWrap[data-show="viewer"] .switchByDataAttr[data-role="viewer"],.overlay .panel.peoplePanel .tabsWrap[data-show="admin"] .switchByDataAttr[data-role="admin"],.manageWholeTeam.peoplePanel .tabsWrap[data-show="admin"] .switchByDataAttr[data-role="admin"],.overlay .panel.peoplePanel .tabsWrap[data-show="member"] .switchByDataAttr[data-role="member"],.manageWholeTeam.peoplePanel .tabsWrap[data-show="member"] .switchByDataAttr[data-role="member"],.overlay .panel.peoplePanel .tabsWrap[data-show="invite"] .switchByDataAttr[data-type="Invite"],.manageWholeTeam.peoplePanel .tabsWrap[data-show="invite"] .switchByDataAttr[data-type="Invite"] {
 display: block
 }
-.overlay .panel.peoplePanel .tabsWrap[data-show="all"] .userCard.listItem ~ .userCardBlankSlate,.manageWholeTeam.peoplePanel .tabsWrap[data-show="all"] .userCard.listItem ~ .userCardBlankSlate,.overlay .panel.peoplePanel .tabsWrap[data-show="editor"] .userCard.listItem[data-role="editor"] ~ .userCardBlankSlate,.manageWholeTeam.peoplePanel .tabsWrap[data-show="editor"] .userCard.listItem[data-role="editor"] ~ .userCardBlankSlate,.overlay .panel.peoplePanel .tabsWrap[data-show="viewer"] .userCard.listItem[data-role="viewer"] ~ .userCardBlankSlate,.manageWholeTeam.peoplePanel .tabsWrap[data-show="viewer"] .userCard.listItem[data-role="viewer"] ~ .userCardBlankSlate,.overlay .panel.peoplePanel .tabsWrap[data-show="admin"] .userCard.listItem[data-role="admin"] ~ .userCardBlankSlate,.manageWholeTeam.peoplePanel .tabsWrap[data-show="admin"] .userCard.listItem[data-role="admin"] ~ .userCardBlankSlate,.overlay .panel.peoplePanel .tabsWrap[data-show="member"] .userCard.listItem[data-role="member"] ~ .userCardBlankSlate,.manageWholeTeam.peoplePanel .tabsWrap[data-show="member"] .userCard.listItem[data-role="member"] ~ .userCardBlankSlate,.overlay .panel.peoplePanel .tabsWrap[data-show="invite"] .userCard.listItem[data-type="Invite"] ~ .userCardBlankSlate,.manageWholeTeam.peoplePanel .tabsWrap[data-show="invite"] .userCard.listItem[data-type="Invite"] ~ .userCardBlankSlate {
+.overlay .panel.peoplePanel .tabsWrap[data-show="all"] .user-card.list-item ~ .user-cardBlankSlate,.manageWholeTeam.peoplePanel .tabsWrap[data-show="all"] .user-card.list-item ~ .user-cardBlankSlate,.overlay .panel.peoplePanel .tabsWrap[data-show="editor"] .user-card.list-item[data-role="editor"] ~ .user-cardBlankSlate,.manageWholeTeam.peoplePanel .tabsWrap[data-show="editor"] .user-card.list-item[data-role="editor"] ~ .user-cardBlankSlate,.overlay .panel.peoplePanel .tabsWrap[data-show="viewer"] .user-card.list-item[data-role="viewer"] ~ .user-cardBlankSlate,.manageWholeTeam.peoplePanel .tabsWrap[data-show="viewer"] .user-card.list-item[data-role="viewer"] ~ .user-cardBlankSlate,.overlay .panel.peoplePanel .tabsWrap[data-show="admin"] .user-card.list-item[data-role="admin"] ~ .user-cardBlankSlate,.manageWholeTeam.peoplePanel .tabsWrap[data-show="admin"] .user-card.list-item[data-role="admin"] ~ .user-cardBlankSlate,.overlay .panel.peoplePanel .tabsWrap[data-show="member"] .user-card.list-item[data-role="member"] ~ .user-cardBlankSlate,.manageWholeTeam.peoplePanel .tabsWrap[data-show="member"] .user-card.list-item[data-role="member"] ~ .user-cardBlankSlate,.overlay .panel.peoplePanel .tabsWrap[data-show="invite"] .user-card.list-item[data-type="Invite"] ~ .user-cardBlankSlate,.manageWholeTeam.peoplePanel .tabsWrap[data-show="invite"] .user-card.list-item[data-type="Invite"] ~ .user-cardBlankSlate {
 display: none
 }
 .overlay .panel.peoplePanel .tabsWrap .isEditor .removeViewer,.manageWholeTeam.peoplePanel .tabsWrap .isEditor .removeViewer,.overlay .panel.peoplePanel .tabsWrap .isEditor .removeInvite,.manageWholeTeam.peoplePanel .tabsWrap .isEditor .removeInvite,.overlay .panel.peoplePanel .tabsWrap .isEditor .morphEditor,.manageWholeTeam.peoplePanel .tabsWrap .isEditor .morphEditor,.overlay .panel.peoplePanel .tabsWrap .isEditor .resendInvite,.manageWholeTeam.peoplePanel .tabsWrap .isEditor .resendInvite {
@@ -4966,7 +4843,7 @@ color: #fff
 .overlay .panel.peoplePanel,.manageWholeTeam.peoplePanel {
 text-shadow: none;
 }
-.overlay .panel.peoplePanel .userCard.listItem .userName,.manageWholeTeam.peoplePanel .userCard.listItem .userName {
+.overlay .panel.peoplePanel .user-card.list-item .userName,.manageWholeTeam.peoplePanel .user-card.list-item .userName {
 font-size: 90%
 }
 .overlay .panel.peoplePanel > .close,.manageWholeTeam.peoplePanel > .close {
@@ -5015,7 +4892,7 @@ font-weight: 600
 .overlay .panel .dropdownListItem:first-child .dropdownLink,.manageWholeTeam .dropdownListItem:first-child .dropdownLink {
 border-top: none
 }
-.overlay .panel .userCard.userCardMenu > ul {
+.overlay .panel .user-card.user-cardMenu > ul {
 -webkit-border-radius: 5px;
 border-radius: 5px;
 overflow: hidden

@@ -84,12 +84,18 @@
     <div class="panelLike organisationsGrid">
 
     <div class="organisationsGridMenu">
-      <h2 class="organisationsGridHeadline">Members</h2>
+      <h2 class="organisationsGridHeadline">Categories</h2>
       <ul>
-            <li data-attr="show" data-target=".tabsWrap" data-filter="all" class="filterGridItems changeData active">All <span class="badgeLike">1</span></li>
+        <li data-attr="show" data-target=".tabsWrap" data-filter="all" class="filterGridItems changeData active">All <span class="badgeLike">1</span></li>
         <li data-attr="show" data-target=".tabsWrap" data-filter="admin" class="filterGridItems changeData">Administrators <span class="badgeLike">1</span></li>
         <li data-attr="show" data-target=".tabsWrap" data-filter="member" class="filterGridItems changeData">Members <span class="badgeLike">0</span></li>
         <li data-attr="show" data-target=".tabsWrap" data-filter="invite" class="filterGridItems changeData">Invitations <span class="badgeLike">0</span></li>
+      </ul>
+
+      <br>
+
+      <ul>
+        <li data-attr="show" data-target=".tabsWrap" data-filter="invite" class="filterGridItems changeData">See all categories</li>
       </ul>
     </div>
 
@@ -98,58 +104,59 @@
       <div class="addPeople grids">
         <div class="infoMessage"></div>
         <div class="teamApisListFilter filterLayer">
-          <span class="magnifyGlass vIco vLoupe vLight2State"></span>
-          <input type="text" size="47" data-list=".profilesList &gt; li.userCard.listItem" data-fresh="1" data-playevents="1" data-childs=".userName" data-toggle-class="hidden" class="filterInput teamApisListFilterInput" placeholder="Search Projects">
+          <input type="text" size="47" data-list=".profilesList &gt; li.user-card.list-item" data-fresh="1" data-playevents="1" data-childs=".userName" data-toggle-class="hidden" class="filterInput teamApisListFilterInput" placeholder="Search Projects">
         </div>
       </div>
 
-      <div class="tabsWrap" data-show="all"><ul data-menu=".organisationsGridMenu" class="profilesList userCard list grids">
+      <div>
+        <ul data-menu=".organisationsGridMenu" class="profilesList user-card list grids">
 
-                              <li class="userCard listItem" data-selfie="1" data-role="admin" data-type="Admin" data-id="54087cd6b9cc1d02000010b3">
-    <div class="userCardFront">
-    <figure class="userAvatar">
-      <img src="https://avatars.githubusercontent.com/u/37480?s=70&amp;d=https%3A%2F%2Flelylan.a.ssl.fastly.net%2Fassets%2Fimages%2Fdefault_user_avatar-8f601fa59d98081b.png" height="70" width="70" />
-    </figure>
-    <span class="userName">
-    <b class="block">Andrea Reginato</b>
-      <a href="mailto:andrea.reginato@gmail.com">andrea.reginato@gmail.com</a>
-    </span>
-    <span class="infoIco opposite icon-star hintMe" title="Admin"></span>
+          <li class="user-card list-item" data-selfie="1" data-role="admin" data-type="Admin" data-id="54087cd6b9cc1d02000010b3">
+            <div class="user-cardFront">
+              <img class="user-avatar" src="images/project.png"/>
+              <h1 class="title">Connect your first light to the web with Arduino</h1>
+              <p class="tags">
+                <a class="tag" href="#">arduino</a>
+                <a class="tag" href="#">light</a>
+                <a class="tag" href="#">mqtt</a>
+              </p>
+              <p class="description">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                architecto beatae vitae dicta sunt explicabo...
+              </p>
+              <p class="link" >
+                <i class="fa fa-external-link"></i>
+                <a href="#" target="_blank">Learn how to make it yourself</a>
+              </p>
+            </div>
+          </li>
 
-    </div></li>
+          <li class="user-card list-item" data-selfie="1" data-role="admin" data-type="Admin" data-id="54087cd6b9cc1d02000010b3">
+            <div class="user-cardFront">
+              <img class="user-avatar" src="images/project.png"/>
+              <h1 class="title">Connect your first light ikea light to the web with Arduino Yun</h1>
+              <p class="tags">
+                <a class="tag" href="#">arduino</a>
+                <a class="tag" href="#">light</a>
+                <a class="tag" href="#">mqtt</a>
+                <a class="tag" href="#">ikea</a>
+                <a class="tag" href="#">wifi</a>
+              </p>
+              <p class="description">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                architecto beatae vitae dicta sunt explicabo...
+              </p>
+              <p class="link" >
+                <i class="fa fa-external-link"></i>
+                <a href="#">Learn how to make it yourself</a>
+              </p>
+            </div>
+          </li>
 
-        <li class="userCardBlankSlate">
-          <span class="switchByDataAttr" data-role="all">
-            <i class="vIco vPeople vDefaultState"></i><br>
-            <strong>You have no members at the moment</strong>
-            Click on Add Members to invite them.
-          </span>
-          <span class="switchByDataAttr" data-role="member">
-            <i class="vIco vEmpty"></i><br>
-            Members can by default edit Team API Blueprints.
-          </span>
-          <span class="switchByDataAttr" data-role="admin">
-            <i class="vIco vEmpty"></i><br>
-            Admins of the Team are able to <!-- change Team Settings &amp;  --> manage Team Members.
-          </span>
-          <span class="switchByDataAttr" data-type="Invite">
-            <i class="vIco vEmpty"></i><br>
-            There are no pending Team Invitations.<br>
-            Click on Add Members to invite new members.
-          </span>
-        </li>
-
-            <li class="userCard userCardMenu okMenu inactiveMenu">
-          <ul>
-            <li class="dropdownListItem onlyMember morphAdmin"><a class="dropdownLink" data-csrftoken="ApxCFSixIDOotGpS2Uwa7Mfj%2FGZRVsm0DH6g4%3D" data-type="POST" data-target-role="Admin" href="/organisations/manage/544505122aacbe020000001c/people/promote/">Promote to Admin</a></li>
-            <li class="dropdownListItem onlyAdmin morphMember"><a class="dropdownLink" data-csrftoken="ApxCFSixIDOotGpS2Uwa7Mfj%2FGZRVsm0DH6g4%3D" data-type="POST" data-target-role="Member" href="/organisations/manage/544505122aacbe020000001c/people/demote/">Demote to Member</a></li>
-            <li class="dropdownListItem onlyAdmin removeAdmin"><a class="dropdownLink" data-csrftoken="ApxCFSixIDOotGpS2Uwa7Mfj%2FGZRVsm0DH6g4%3D" data-type="DELETE" href="/organisations/manage/544505122aacbe020000001c/people/remove/admin/">Remove Admin</a></li>
-            <li class="dropdownListItem onlyMember removeMember"><a class="dropdownLink" data-csrftoken="ApxCFSixIDOotGpS2Uwa7Mfj%2FGZRVsm0DH6g4%3D" data-type="DELETE" href="/organisations/manage/544505122aacbe020000001c/people/remove/member/">Remove Member</a></li>
-            <li class="dropdownListItem onlyInvite resendInvite"><a class="dropdownLink" data-csrftoken="ApxCFSixIDOotGpS2Uwa7Mfj%2FGZRVsm0DH6g4%3D" data-type="POST" href="/organisations/manage/544505122aacbe020000001c/people/resend/">Resend invitation mail</a></li>
-            <li class="dropdownListItem onlyInvite removeInvite"><a class="dropdownLink" data-csrftoken="ApxCFSixIDOotGpS2Uwa7Mfj%2FGZRVsm0DH6g4%3D" data-type="GET" href="/organisations/invitations/544505122aacbe020000001c/decline/">Cancel invitation</a></li>
-          </ul>
-        </li>
-      </ul></div>
+        </ul>
+      </div>
     </div>
 
     </div></div>
