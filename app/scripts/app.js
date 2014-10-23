@@ -20,6 +20,14 @@ angular
         templateUrl: 'views/projects.html',
         controller: 'ProjectsCtrl'
       })
+      .when('/projects/all', {
+        templateUrl: 'views/projects.html',
+        controller: 'ProjectsCtrl'
+      })
+      .when('/projects/:category', {
+        templateUrl: 'views/projects.html',
+        controller: 'ProjectsCtrl'
+      })
       .when('/categories', {
         templateUrl: 'views/categories.html',
         controller: 'CategoriesCtrl'

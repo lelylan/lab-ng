@@ -189,10 +189,10 @@ font-size: 90%
 }
 a,a:visited {
 text-decoration: none;
-color: #06c;
+color: #fff;
 }
 a:hover,a:visited:hover {
-color: #036
+color: #fff;
 }
 .clr {
 clear: both
@@ -3878,6 +3878,11 @@ border-color: #6b7289
 position: relative;
 padding: 20px;
 text-shadow: none
+}
+
+.filterGridItem a,
+.filterGridItem a:hover {
+  color: #fff;
 }
 
 
