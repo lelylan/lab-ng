@@ -3843,12 +3843,12 @@ float: left;
 margin-top: 20px;
 margin-left: 30px
 }
-.panelLike .user-cardBlankSlate,.panelLike .blankSlate {
+.panelLike .item-cardBlankSlate,.panelLike .blankSlate {
 display: block;
 list-style-type: none;
 height: 0;
 }
-.panelLike .user-cardBlankSlate strong,.panelLike .blankSlate strong {
+.panelLike .item-cardBlankSlate strong,.panelLike .blankSlate strong {
 display: block;
 font-size: 28px;
 line-height: 34px
@@ -3880,9 +3880,10 @@ padding: 20px;
 text-shadow: none
 }
 
+
 /* start lelylan card */
 
-.user-card {
+.item-card {
   padding: 0;
   margin: 0;
   min-height: 400px;
@@ -3892,15 +3893,11 @@ text-shadow: none
   text-shadow: none;
 }
 
-.user-card :hover {
-  cursor: pointer;
-}
-
-.user-card.list-item {
+.item-card.list-item {
   margin: 10px 10px 0
 }
 
-.user-card .user-avatar {
+.item-card .user-avatar {
   display: block;
   width: 250px;
   height: 100px;
@@ -3908,7 +3905,7 @@ text-shadow: none
   border-radius-top: 5px 5px 0 0 ;
 }
 
-.user-card.list-item {
+.item-card.list-item {
   width: 250px;
   float: left;
   max-height: 200px;
@@ -3919,11 +3916,11 @@ text-shadow: none
   border-radius: 5px;
 }
 
-.user-card.list-item:hover {
+.item-card.list-item:hover {
   background-color: #f5f5f5
 }
 
-.user-card .title {
+.item-card .title {
   color: #333;
   font-size: 1.2em;
   line-height: 1.3em;
@@ -3932,23 +3929,23 @@ text-shadow: none
   padding: 20px 10px 0px;
 }
 
-.user-card .tags {
+.item-card .tags {
   font-size: 1em;
   width: 90%;
   padding: 0px 10px 0px;
 }
 
-.user-card .tag:before {
+.item-card .tag:before {
   content: "#";
 }
 
-.user-card .tag,
-.user-card .tag#hover {
+.item-card .tag,
+.item-card .tag#hover {
   font-weight: bolder;
   color: #239cbb;
 }
 
-.user-card .description {
+.item-card .description {
   color: #666;
   font-size: .95em;
   line-height: 1.3em;
@@ -3958,7 +3955,7 @@ text-shadow: none
   padding-top: 0;
 }
 
-.user-card .link {
+.item-card .link {
   position: absolute;
   bottom: 0;
   color: #239cbb;
@@ -3970,12 +3967,36 @@ text-shadow: none
   /*border-right: 1px solid #D1EAEA;*/
 }
 
-.user-card .link a,
-.user-card .link a:hover {
+.item-card .link a,
+.item-card .link a:hover {
   color: #239cbb;
 }
 
 /* end lelylan card */
+
+.category-card.list-item {
+  height: 40px !important;
+  width: 200px !important;
+  cursor: pointer;
+}
+
+.category-card.list-item {
+  width: 150px;
+  height: 40px;
+  min-height: 40px;
+}
+
+.category-card .badgeLike {
+  margin-top: 12px;
+  color: #239cbb;
+  background: rgba(0,0,0,0.001);
+  border: 1px solid #e6e6e6;
+}
+
+
+
+
+
 
 .peoplePanel .switchByDataAttr,.panelLike .switchByDataAttr {
 position: absolute;
@@ -4001,14 +4022,14 @@ margin: 0 auto;
 display: block;
 margin-top: 50px
 }
-.peoplePanel .user-cardBlankSlate,.panelLike .user-cardBlankSlate {
+.peoplePanel .item-cardBlankSlate,.panelLike .item-cardBlankSlate {
 text-align: center;
 margin-left: auto;
 margin-right: auto;
 list-style-type: none;
 margin-top: 50px;
 }
-.peoplePanel .user-cardBlankSlate .vIco,.panelLike .user-cardBlankSlate .vIco {
+.peoplePanel .item-cardBlankSlate .vIco,.panelLike .item-cardBlankSlate .vIco {
 opacity: .15;
 -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=15)";
 filter: alpha(opacity=15);
@@ -4024,7 +4045,7 @@ transform: scale(5);
 transform-origin: center bottom;
 margin-bottom: 20px;
 }
-.peoplePanel .user-cardBlankSlate .vIco.vDocument,.panelLike .user-cardBlankSlate .vIco.vDocument {
+.peoplePanel .item-cardBlankSlate .vIco.vDocument,.panelLike .item-cardBlankSlate .vIco.vDocument {
 opacity: .5;
 -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 filter: alpha(opacity=50)
@@ -4107,7 +4128,7 @@ background-color: #2690ab;
 border-color: transparent;
 color: #fff
 }
-.organisationsGridMenu .badgeLike {
+.badgeLike {
 float: right;
 margin-top: -1px;
 -webkit-border-radius: 14px;
@@ -4714,10 +4735,10 @@ margin: 0
 .overlay .panel.peoplePanel .addPeople,.manageWholeTeam.peoplePanel .addPeople {
 background-color: #f6f6f6
 }
-.overlay .panel.peoplePanel .user-card.list,.manageWholeTeam.peoplePanel .user-card.list {
+.overlay .panel.peoplePanel .item-card.list,.manageWholeTeam.peoplePanel .item-card.list {
 padding: 0 0 10px 20px
 }
-.overlay .panel.peoplePanel .user-card.list-item,.manageWholeTeam.peoplePanel .user-card.list-item {
+.overlay .panel.peoplePanel .item-card.list-item,.manageWholeTeam.peoplePanel .item-card.list-item {
 padding: 0;
 float: left;
 background-color: #fff;
@@ -4748,12 +4769,12 @@ transition-timing-function: ease-in-out;
 -ms-transition-delay: 0;
 transition-delay: 0;
 }
-.overlay .panel.peoplePanel .user-card.list-item.highlightedAsNew,.manageWholeTeam.peoplePanel .user-card.list-item.highlightedAsNew {
+.overlay .panel.peoplePanel .item-card.list-item.highlightedAsNew,.manageWholeTeam.peoplePanel .item-card.list-item.highlightedAsNew {
 background-color: #fffbef;
 -webkit-box-shadow: inset 0 0 1px 1px #ffe28c;
 box-shadow: inset 0 0 1px 1px #ffe28c
 }
-.overlay .panel.peoplePanel .user-card.user-cardMenu,.manageWholeTeam.peoplePanel .user-card.user-cardMenu {
+.overlay .panel.peoplePanel .item-card.item-cardMenu,.manageWholeTeam.peoplePanel .item-card.item-cardMenu {
 padding: 0;
 opacity: .95;
 -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
@@ -4765,22 +4786,22 @@ background-color: #5d6577;
 box-shadow: none;
 width: 160px;
 }
-.overlay .panel.peoplePanel .user-card.user-cardMenu:before,.manageWholeTeam.peoplePanel .user-card.user-cardMenu:before {
+.overlay .panel.peoplePanel .item-card.item-cardMenu:before,.manageWholeTeam.peoplePanel .item-card.item-cardMenu:before {
 display: none
 }
-.overlay .panel.peoplePanel .user-card.user-cardMenu ul,.manageWholeTeam.peoplePanel .user-card.user-cardMenu ul,.overlay .panel.peoplePanel .user-card.user-cardMenu li,.manageWholeTeam.peoplePanel .user-card.user-cardMenu li {
+.overlay .panel.peoplePanel .item-card.item-cardMenu ul,.manageWholeTeam.peoplePanel .item-card.item-cardMenu ul,.overlay .panel.peoplePanel .item-card.item-cardMenu li,.manageWholeTeam.peoplePanel .item-card.item-cardMenu li {
 padding: 0
 }
-.overlay .panel.peoplePanel .user-card.user-cardMenu.inactiveMenu,.manageWholeTeam.peoplePanel .user-card.user-cardMenu.inactiveMenu {
+.overlay .panel.peoplePanel .item-card.item-cardMenu.inactiveMenu,.manageWholeTeam.peoplePanel .item-card.item-cardMenu.inactiveMenu {
 display: none
 }
-.overlay .panel.peoplePanel .tabsWrap[data-show="editor"] .user-card[data-role="viewer"],.manageWholeTeam.peoplePanel .tabsWrap[data-show="editor"] .user-card[data-role="viewer"],.overlay .panel.peoplePanel .tabsWrap[data-show="viewer"] .user-card[data-role="editor"],.manageWholeTeam.peoplePanel .tabsWrap[data-show="viewer"] .user-card[data-role="editor"],.overlay .panel.peoplePanel .tabsWrap[data-show="admin"] .user-card[data-role="member"],.manageWholeTeam.peoplePanel .tabsWrap[data-show="admin"] .user-card[data-role="member"],.overlay .panel.peoplePanel .tabsWrap[data-show="member"] .user-card[data-role="admin"],.manageWholeTeam.peoplePanel .tabsWrap[data-show="member"] .user-card[data-role="admin"],.overlay .panel.peoplePanel .tabsWrap[data-show="invite"] .user-card.list-item:not([data-type="Invite"]),.manageWholeTeam.peoplePanel .tabsWrap[data-show="invite"] .user-card.list-item:not([data-type="Invite"]) {
+.overlay .panel.peoplePanel .tabsWrap[data-show="editor"] .item-card[data-role="viewer"],.manageWholeTeam.peoplePanel .tabsWrap[data-show="editor"] .item-card[data-role="viewer"],.overlay .panel.peoplePanel .tabsWrap[data-show="viewer"] .item-card[data-role="editor"],.manageWholeTeam.peoplePanel .tabsWrap[data-show="viewer"] .item-card[data-role="editor"],.overlay .panel.peoplePanel .tabsWrap[data-show="admin"] .item-card[data-role="member"],.manageWholeTeam.peoplePanel .tabsWrap[data-show="admin"] .item-card[data-role="member"],.overlay .panel.peoplePanel .tabsWrap[data-show="member"] .item-card[data-role="admin"],.manageWholeTeam.peoplePanel .tabsWrap[data-show="member"] .item-card[data-role="admin"],.overlay .panel.peoplePanel .tabsWrap[data-show="invite"] .item-card.list-item:not([data-type="Invite"]),.manageWholeTeam.peoplePanel .tabsWrap[data-show="invite"] .item-card.list-item:not([data-type="Invite"]) {
 display: none
 }
 .overlay .panel.peoplePanel .tabsWrap[data-show="all"] .switchByDataAttr[data-role="all"],.manageWholeTeam.peoplePanel .tabsWrap[data-show="all"] .switchByDataAttr[data-role="all"],.overlay .panel.peoplePanel .tabsWrap[data-show="editor"] .switchByDataAttr[data-role="editor"],.manageWholeTeam.peoplePanel .tabsWrap[data-show="editor"] .switchByDataAttr[data-role="editor"],.overlay .panel.peoplePanel .tabsWrap[data-show="viewer"] .switchByDataAttr[data-role="viewer"],.manageWholeTeam.peoplePanel .tabsWrap[data-show="viewer"] .switchByDataAttr[data-role="viewer"],.overlay .panel.peoplePanel .tabsWrap[data-show="admin"] .switchByDataAttr[data-role="admin"],.manageWholeTeam.peoplePanel .tabsWrap[data-show="admin"] .switchByDataAttr[data-role="admin"],.overlay .panel.peoplePanel .tabsWrap[data-show="member"] .switchByDataAttr[data-role="member"],.manageWholeTeam.peoplePanel .tabsWrap[data-show="member"] .switchByDataAttr[data-role="member"],.overlay .panel.peoplePanel .tabsWrap[data-show="invite"] .switchByDataAttr[data-type="Invite"],.manageWholeTeam.peoplePanel .tabsWrap[data-show="invite"] .switchByDataAttr[data-type="Invite"] {
 display: block
 }
-.overlay .panel.peoplePanel .tabsWrap[data-show="all"] .user-card.list-item ~ .user-cardBlankSlate,.manageWholeTeam.peoplePanel .tabsWrap[data-show="all"] .user-card.list-item ~ .user-cardBlankSlate,.overlay .panel.peoplePanel .tabsWrap[data-show="editor"] .user-card.list-item[data-role="editor"] ~ .user-cardBlankSlate,.manageWholeTeam.peoplePanel .tabsWrap[data-show="editor"] .user-card.list-item[data-role="editor"] ~ .user-cardBlankSlate,.overlay .panel.peoplePanel .tabsWrap[data-show="viewer"] .user-card.list-item[data-role="viewer"] ~ .user-cardBlankSlate,.manageWholeTeam.peoplePanel .tabsWrap[data-show="viewer"] .user-card.list-item[data-role="viewer"] ~ .user-cardBlankSlate,.overlay .panel.peoplePanel .tabsWrap[data-show="admin"] .user-card.list-item[data-role="admin"] ~ .user-cardBlankSlate,.manageWholeTeam.peoplePanel .tabsWrap[data-show="admin"] .user-card.list-item[data-role="admin"] ~ .user-cardBlankSlate,.overlay .panel.peoplePanel .tabsWrap[data-show="member"] .user-card.list-item[data-role="member"] ~ .user-cardBlankSlate,.manageWholeTeam.peoplePanel .tabsWrap[data-show="member"] .user-card.list-item[data-role="member"] ~ .user-cardBlankSlate,.overlay .panel.peoplePanel .tabsWrap[data-show="invite"] .user-card.list-item[data-type="Invite"] ~ .user-cardBlankSlate,.manageWholeTeam.peoplePanel .tabsWrap[data-show="invite"] .user-card.list-item[data-type="Invite"] ~ .user-cardBlankSlate {
+.overlay .panel.peoplePanel .tabsWrap[data-show="all"] .item-card.list-item ~ .item-cardBlankSlate,.manageWholeTeam.peoplePanel .tabsWrap[data-show="all"] .item-card.list-item ~ .item-cardBlankSlate,.overlay .panel.peoplePanel .tabsWrap[data-show="editor"] .item-card.list-item[data-role="editor"] ~ .item-cardBlankSlate,.manageWholeTeam.peoplePanel .tabsWrap[data-show="editor"] .item-card.list-item[data-role="editor"] ~ .item-cardBlankSlate,.overlay .panel.peoplePanel .tabsWrap[data-show="viewer"] .item-card.list-item[data-role="viewer"] ~ .item-cardBlankSlate,.manageWholeTeam.peoplePanel .tabsWrap[data-show="viewer"] .item-card.list-item[data-role="viewer"] ~ .item-cardBlankSlate,.overlay .panel.peoplePanel .tabsWrap[data-show="admin"] .item-card.list-item[data-role="admin"] ~ .item-cardBlankSlate,.manageWholeTeam.peoplePanel .tabsWrap[data-show="admin"] .item-card.list-item[data-role="admin"] ~ .item-cardBlankSlate,.overlay .panel.peoplePanel .tabsWrap[data-show="member"] .item-card.list-item[data-role="member"] ~ .item-cardBlankSlate,.manageWholeTeam.peoplePanel .tabsWrap[data-show="member"] .item-card.list-item[data-role="member"] ~ .item-cardBlankSlate,.overlay .panel.peoplePanel .tabsWrap[data-show="invite"] .item-card.list-item[data-type="Invite"] ~ .item-cardBlankSlate,.manageWholeTeam.peoplePanel .tabsWrap[data-show="invite"] .item-card.list-item[data-type="Invite"] ~ .item-cardBlankSlate {
 display: none
 }
 .overlay .panel.peoplePanel .tabsWrap .isEditor .removeViewer,.manageWholeTeam.peoplePanel .tabsWrap .isEditor .removeViewer,.overlay .panel.peoplePanel .tabsWrap .isEditor .removeInvite,.manageWholeTeam.peoplePanel .tabsWrap .isEditor .removeInvite,.overlay .panel.peoplePanel .tabsWrap .isEditor .morphEditor,.manageWholeTeam.peoplePanel .tabsWrap .isEditor .morphEditor,.overlay .panel.peoplePanel .tabsWrap .isEditor .resendInvite,.manageWholeTeam.peoplePanel .tabsWrap .isEditor .resendInvite {
@@ -4843,7 +4864,7 @@ color: #fff
 .overlay .panel.peoplePanel,.manageWholeTeam.peoplePanel {
 text-shadow: none;
 }
-.overlay .panel.peoplePanel .user-card.list-item .userName,.manageWholeTeam.peoplePanel .user-card.list-item .userName {
+.overlay .panel.peoplePanel .item-card.list-item .userName,.manageWholeTeam.peoplePanel .item-card.list-item .userName {
 font-size: 90%
 }
 .overlay .panel.peoplePanel > .close,.manageWholeTeam.peoplePanel > .close {
@@ -4892,7 +4913,7 @@ font-weight: 600
 .overlay .panel .dropdownListItem:first-child .dropdownLink,.manageWholeTeam .dropdownListItem:first-child .dropdownLink {
 border-top: none
 }
-.overlay .panel .user-card.user-cardMenu > ul {
+.overlay .panel .item-card.item-cardMenu > ul {
 -webkit-border-radius: 5px;
 border-radius: 5px;
 overflow: hidden

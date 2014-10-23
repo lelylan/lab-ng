@@ -36,19 +36,19 @@
           <nav class="apiMenu menuCell menuTeam">
           <ul class="apiMenuList apiMenuTexts">
             <li class="apiMenuItem">
-            <a id="teamMembersLink" class="vIcoIn menuTeamLink selected" href="https://login.lelylan.io/organisations/manage/544505122aacbe020000001c/team">
+            <a id="teamMembersLink" class="vIcoIn menuTeamLink selected" href="#projects">
               <i class="fa fa-list-ul"></i>
               Projects
             </a>
             </li>
             <li class="apiMenuItem">
-            <a id="teamApisLink" class="vIcoIn menuTeamLink" href="https://login.lelylan.io/organisations/manage/544505122aacbe020000001c/apis">
+            <a id="teamApisLink" class="vIcoIn menuTeamLink" href="#categories">
               <i class="fa fa-tags"></i>
-              Categories
+              All Categories
             </a>
             </li>
             <li class="apiMenuItem">
-            <a id="teamApisLink" class="vIcoIn menuTeamLink" href="https://login.lelylan.io/organisations/manage/544505122aacbe020000001c/apis">
+            <a id="teamApisLink" class="vIcoIn menuTeamLink" href="#create">
               <i class="fa fa-plus"></i>
               Create
             </a>
@@ -77,91 +77,34 @@
           </div>
         </div>
       </div>
+
       </header>
 
       <div class="manageWholeTeam peoplePanel">
 
     <div class="panelLike organisationsGrid">
+      <div class="organisationsGridMenu">
+        <h2 class="organisationsGridHeadline">Categories</h2>
+        <ul>
+          <li class="filterGridItems changeData active">All <span class="badgeLike">23</span></li>
+          <li class="filterGridItems changeData">Hardware <span class="badgeLike">12</span></li>
+          <li class="filterGridItems changeData">Software <span class="badgeLike">2</span></li>
+          <li class="filterGridItems changeData">Arduino <span class="badgeLike">2</span></li>
+        </ul><br>
 
-    <div class="organisationsGridMenu">
-      <h2 class="organisationsGridHeadline">Categories</h2>
-      <ul>
-        <li data-attr="show" data-target=".tabsWrap" data-filter="all" class="filterGridItems changeData active">All <span class="badgeLike">1</span></li>
-        <li data-attr="show" data-target=".tabsWrap" data-filter="admin" class="filterGridItems changeData">Administrators <span class="badgeLike">1</span></li>
-        <li data-attr="show" data-target=".tabsWrap" data-filter="member" class="filterGridItems changeData">Members <span class="badgeLike">0</span></li>
-        <li data-attr="show" data-target=".tabsWrap" data-filter="invite" class="filterGridItems changeData">Invitations <span class="badgeLike">0</span></li>
-      </ul>
-
-      <br>
-
-      <ul>
-        <li data-attr="show" data-target=".tabsWrap" data-filter="invite" class="filterGridItems changeData">See all categories</li>
-      </ul>
-    </div>
-
-    <div class="organisationsGridCards">
-
-      <div class="addPeople grids">
-        <div class="infoMessage"></div>
-        <div class="teamApisListFilter filterLayer">
-          <input type="text" size="47" data-list=".profilesList &gt; li.user-card.list-item" data-fresh="1" data-playevents="1" data-childs=".userName" data-toggle-class="hidden" class="filterInput teamApisListFilterInput" placeholder="Search Projects">
-        </div>
-      </div>
-
-      <div>
-        <ul data-menu=".organisationsGridMenu" class="profilesList user-card list grids">
-
-          <li class="user-card list-item" data-selfie="1" data-role="admin" data-type="Admin" data-id="54087cd6b9cc1d02000010b3">
-            <div class="user-cardFront">
-              <img class="user-avatar" src="images/project.png"/>
-              <h1 class="title">Connect your first light to the web with Arduino</h1>
-              <p class="tags">
-                <a class="tag" href="#">arduino</a>
-                <a class="tag" href="#">light</a>
-                <a class="tag" href="#">mqtt</a>
-              </p>
-              <p class="description">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                architecto beatae vitae dicta sunt explicabo...
-              </p>
-              <p class="link" >
-                <i class="fa fa-external-link"></i>
-                <a href="#" target="_blank">Learn how to make it yourself</a>
-              </p>
-            </div>
-          </li>
-
-          <li class="user-card list-item" data-selfie="1" data-role="admin" data-type="Admin" data-id="54087cd6b9cc1d02000010b3">
-            <div class="user-cardFront">
-              <img class="user-avatar" src="images/project.png"/>
-              <h1 class="title">Connect your first light ikea light to the web with Arduino Yun</h1>
-              <p class="tags">
-                <a class="tag" href="#">arduino</a>
-                <a class="tag" href="#">light</a>
-                <a class="tag" href="#">mqtt</a>
-                <a class="tag" href="#">ikea</a>
-                <a class="tag" href="#">wifi</a>
-              </p>
-              <p class="description">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                architecto beatae vitae dicta sunt explicabo...
-              </p>
-              <p class="link" >
-                <i class="fa fa-external-link"></i>
-                <a href="#">Learn how to make it yourself</a>
-              </p>
-            </div>
-          </li>
-
+        <ul>
+          <li data-attr="show" data-target=".tabsWrap" data-filter="invite" class="filterGridItems changeData">See all categories</li>
         </ul>
       </div>
-    </div>
+
+
+      <div class="organisationsGridCards">
+      <div ng-view=""></div>
+      </div>
 
     </div></div>
 
-  </div>
+    </div>
 
 
 
@@ -183,10 +126,8 @@
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/main.js"></script>
-    <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/controllers/projects.js"></script>
+    <script src="scripts/controllers/categories.js"></script>
     <!-- endbuild -->
 </body>
 </html>
-
-<!--<div ng-view=""></div>-->
