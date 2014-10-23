@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name labNgApp.controller:ProjectsCtrl
+ * @name lelylan-lab.controller:ProjectsCtrl
  * @description
  * # ProjectsCtrl
- * Controller of the labNgApp
+ * Controller of the lelylan-lab
  */
-angular.module('labNgApp')
+angular.module('lelylan-lab')
   .controller('ProjectsCtrl', function ($scope, $rootScope, $routeParams) {
     $rootScope.page = 'projects';
     $scope.category = $routeParams.category;

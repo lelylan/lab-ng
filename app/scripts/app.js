@@ -2,17 +2,21 @@
 
 /**
  * @ngdoc overview
- * @name labNgApp
+ * @name lelylan-lab
  * @description
- * # labNgApp
+ * # lelylan-lab
  *
  * Main module of the application.
  */
 angular
-  .module('labNgApp', [
+  .module('lelylan-lab', [
     'ngAnimate',
     'ngRoute',
-    'ngTouch'
+    'ngTouch',
+    'oauth',
+    'lelylan-lab.client.project',
+    'lelylan-lab.client.category',
+    'lelylan-lab.utils'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -47,6 +51,15 @@ angular
       .when('/categories', {
         templateUrl: 'views/categories.html',
         controller: 'CategoriesCtrl'
+      })
+      .when('/access_token=:accessToken', {
+        template: '',
+        controller: function ($location, AccessToken) {
+          var hash = $location.path().substr(1);
+          AccessToken.setTokenFromString(hash);
+          $location.path('/');
+          $location.replace();
+        }
       })
       .otherwise({
         redirectTo: '/'

@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name labNgApp.controller:YoursCtrl
+ * @name lelylan-lab.controller:YoursCtrl
  * @description
  * # YoursCtrl
- * Controller of the labNgApp
+ * Controller of the lelylan-lab
  */
-angular.module('labNgApp')
+angular.module('lelylan-lab')
   .controller('YoursCtrl', function ($scope, $rootScope) {
     $rootScope.page = 'yours'
   });

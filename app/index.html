@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="labNgApp" class="themeDark">
+  <body ng-app="lelylan-lab" ng-controller="ApplicationCtrl" class="themeDark">
 
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -47,13 +47,13 @@
               All Categories
             </a>
             </li>
-            <li class="apiMenuItem">
+            <li class="apiMenuItem" ng-if="logged">
             <a id="teamApisLink" class="vIcoIn menuTeamLink" ng-class="{selected: page=='yours'}" href="#yours">
               <i class="fa fa-user"></i>
               Your Projects
             </a>
             </li>
-            <li class="apiMenuItem">
+            <li class="apiMenuItem" ng-if="logged">
             <a id="teamApisLink" class="vIcoIn menuTeamLink" ng-class="{selected: page=='create'}" href="#create">
               <i class="fa fa-plus"></i>
               Create
@@ -75,7 +75,13 @@
 
           <div class="secondaryNav switcherWrap menuCell">
             <div class="switcherToggle">
-              Logout Andrea Reginato
+              <oauth
+                site="http://localhost:3000"
+                client-id="0e9819715cce6100d8e95e734a42f94f628f91cc5934f8014b91efedb799d36e"
+                redirect-uri="http://localhost:9000/"
+                profile-uri="http://localhost:3000/me"
+                scope="devices">
+              </oauth>
             </div>
           </div>
         </div>
@@ -105,10 +111,7 @@
       </div>
 
     </div></div>
-
     </div>
-
-
 
     <!-- build:js(.) scripts/oldieshim.js -->
     <!--[if lt IE 9]>
@@ -123,17 +126,29 @@
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.js"></script>
+    <script src="bower_components/oauth-ng/dist/oauth-ng.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/categories.js"></script>
+    <script src="scripts/controllers/application.js"></script>
     <script src="scripts/controllers/projects.js"></script>
+    <script src="scripts/controllers/categories.js"></script>
     <script src="scripts/controllers/yours.js"></script>
     <script src="scripts/controllers/create.js"></script>
     <script src="scripts/controllers/edit.js"></script>
     <script src="scripts/controllers/delete.js"></script>
+    <script src="scripts/client/config/config.js"></script>
+    <script src="scripts/client/utils/utils.js"></script>
+    <script src="scripts/client/services/project.js"></script>
+    <script src="scripts/client/services/category.js"></script>
     <!-- endbuild -->
+
+    <!--angular.module('lelylan-lab').config(function(lelylanLabClientConfigProvider) {-->
+      <!--lelylanLabClientConfigProvider.configure({ endpoint: 'http://localhost:3010' });-->
+    <!--});-->
+
 </body>
 </html>

@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name labNgApp.controller:EditCtrl
+ * @name lelylan-lab.controller:EditCtrl
  * @description
  * # EditCtrl
- * Controller of the labNgApp
+ * Controller of the lelylan-lab
  */
-angular.module('labNgApp')
+angular.module('lelylan-lab')
   .controller('EditCtrl', function ($scope, $rootScope, $routeParams) {
     $rootScope.page = 'yours';
     $scope.id = $routeParams.id;

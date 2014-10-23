@@ -2,12 +2,20 @@
 
 /**
  * @ngdoc function
- * @name labNgApp.controller:CategoriesCtrl
+ * @name lelylan-lab.controller:CategoriesCtrl
  * @description
  * # CategoriesCtrl
- * Controller of the labNgApp
+ * Controller of the lelylan-lab
  */
-angular.module('labNgApp')
-  .controller('CategoriesCtrl', function ($scope, $rootScope) {
+angular.module('lelylan-lab')
+  .controller('CategoriesCtrl', function ($scope, $rootScope, Category) {
     $rootScope.page = 'categories';
+
+    Category.all().
+      success(function(data, status, headers, config) {
+        $scope.categories = data;
+        console.log($scope.categories);
+      })
+
+    console.log($rootScope.logged);
   });

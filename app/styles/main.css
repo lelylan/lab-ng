@@ -3028,19 +3028,19 @@ background-color: #37c383;
 color: #fff
 }
 .themeDark .lelylanMenu .switcherWrap.selected .apiSwitcher {
-background-color: #575e70
+background-color: #067A98
 }
 .themeDark .lelylanMenu .switcherWrap.selected .switcherToggle {
-background-color: #575e70
+background-color: #067A98
 }
 .themeDark .lelylanMenu .switcherWrap:hover .switcherToggle {
-background-color: #575e70
+background-color: #067A98
 }
 .themeDark .lelylanMenu .apiNameCell.switcherWrap .apiSwitcher:hover {
-background-color: #575e70
+background-color: #067A98
 }
 .themeDark .lelylanMenu a.apiLines:hover {
-background-color: #575e70
+background-color: #067A98
 }
 .themeDark .lelylanMenu .switcherWrap.selected .switcherToggle {
 color: #fff
@@ -3049,7 +3049,7 @@ color: #fff
 color: #fff
 }
 .themeDark .lelylanMenu .isSelected {
-background-color: #575e70
+background-color: #067A98
 }
 .themeDark .lelylanMenu .isSelected .apiLines .apiName {
 color: #fff
@@ -3112,13 +3112,13 @@ border-bottom-color: rgba(107,114,137,0.6)
 border-bottom-color: rgba(107,114,137,0.6)
 }
 .themeDark .lelylanMenu .menuHelp.selected .helpPopup.switcherLayer:after {
-border-bottom-color: #575e70
+border-bottom-color: #067A98
 }
 .themeDark .lelylanMenu .menuHelp.selected .helpPopup.switcherLayer a {
-background-color: #575e70
+background-color: #067A98
 }
 .themeDark .lelylanMenu .menuHelp.selected .helpPopup.switcherLayer a.hideableHelpLink {
-background-color: #575e70
+background-color: #067A98
 }
 .themeDark .lelylanMenu .menuHelp.selected .helpPopup.switcherLayer a:hover {
 color: #fff;
@@ -3138,7 +3138,7 @@ border-top-color: rgba(193,198,209,0.1)
 color: #ddd
 }
 .themeDark .lelylanMenu .secondaryNav .secondaryNavLayer {
-background-color: #575e70
+background-color: #067A98
 }
 .themeDark .lelylanMenu .secondaryNav .secondaryNavItem {
 border-top-color: #676d81
@@ -3171,10 +3171,10 @@ background-color: #676d81
 }
 .themeDark .lelylanMenu .secondaryNav .logoutForm {
 border-top-color: rgba(193,198,209,0.1);
-background-color: #575e70
+background-color: #067A98
 }
 .themeDark .lelylanMenu .secondaryNav .logoutBtn {
-background-color: #575e70
+background-color: #067A98
 }
 .themeDark .lelylanMenu .secondaryNav .switcherToggle {
 background-color: rgba(87,94,112,0.001)

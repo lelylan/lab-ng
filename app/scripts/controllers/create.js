@@ -2,12 +2,13 @@
 
 /**
  * @ngdoc function
- * @name labNgApp.controller:CreateCtrl
+ * @name lelylan-lab.controller:CreateCtrl
  * @description
  * # CreateCtrl
- * Controller of the labNgApp
+ * Controller of the lelylan-lab
  */
-angular.module('labNgApp')
+
+angular.module('lelylan-lab')
   .controller('CreateCtrl', function ($scope, $rootScope) {
     $rootScope.page = 'create';
   });
