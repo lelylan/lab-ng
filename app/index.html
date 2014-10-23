@@ -1,0 +1,185 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="labNgApp" class="themeDark">
+
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div id="container">
+
+      <header class="fullSize">
+      <div class="lelylanMenu">
+        <div class="wholeMenu menuRow">
+
+          <div role="banner" class="lelylanLogo menuCell">
+            <a class="absFg" title="lelylan Ltd." href="http://lelylan.com/">
+              <span class="visuallyhidden">Lelylan Lab</span>
+            </a>
+          </div>
+
+          <nav class="apiMenu menuCell menuTeam">
+          <ul class="apiMenuList apiMenuTexts">
+            <li class="apiMenuItem">
+            <a id="teamMembersLink" class="vIcoIn menuTeamLink selected" href="https://login.lelylan.io/organisations/manage/544505122aacbe020000001c/team">
+              <i class="fa fa-list-ul"></i>
+              Projects
+            </a>
+            </li>
+            <li class="apiMenuItem">
+            <a id="teamApisLink" class="vIcoIn menuTeamLink" href="https://login.lelylan.io/organisations/manage/544505122aacbe020000001c/apis">
+              <i class="fa fa-tags"></i>
+              Categories
+            </a>
+            </li>
+            <li class="apiMenuItem">
+            <a id="teamApisLink" class="vIcoIn menuTeamLink" href="https://login.lelylan.io/organisations/manage/544505122aacbe020000001c/apis">
+              <i class="fa fa-plus"></i>
+              Create
+            </a>
+            </li>
+          </ul>
+          </nav>
+
+          <div class="menuCell menuHelp switcherWrap">
+            <span class="helpLinks switcherToggle hint vIcoIn" data-hint="Help"><span class="vIco vHelp vDefaultState"><span class="visuallyhidden">Help</span></span></span>
+            <span class="helpPopup switcherLayer visuallyhidden">
+              <a class="hideableHelpLink vIcoIn" target="_blank" href="http://stackoverflow.com/questions/tagged/apiblueprint?sort=newest"><span class="helpText"><span class="vIco vStackOverflow vDimmedState"></span> API Blueprint on Stack Overflow</span></a>
+              <a class="hideableHelpLink vIcoIn" target="_blank" href="http://support.lelylan.io"><span class="helpText"><span class="vIco vBook vDimmedState"></span> Knowledge Base</span></a>
+              <a class="vIcoIn" id="Intercom" href="#" title="Contact lelylan Support"><span class="helpText"><span class="vIco vSpeech vDimmedState"></span> Contact lelylan Support</span></a>
+            </span>
+          </div>
+
+          <div class="menuCell flexibleSpace"></div>
+
+          <div class="secondaryNav switcherWrap menuCell">
+            <div class="switcherToggle">
+              Lelylan
+              <span class="gravatar">
+                <img src="https://secure.gravatar.com/avatar/0?s=32&amp;d=https%3A%2F%2Flelylan.a.ssl.fastly.net%2Fassets%2Fimages%2Fdefault_team_avatar-5fc886aaf5739d37.png" height="32" width="32" />
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      </header>
+
+      <div class="manageWholeTeam peoplePanel">
+
+    <div class="panelLike organisationsGrid">
+
+    <div class="organisationsGridMenu">
+      <h2 class="organisationsGridHeadline">Members</h2>
+      <ul>
+            <li data-attr="show" data-target=".tabsWrap" data-filter="all" class="filterGridItems changeData active">All <span class="badgeLike">1</span></li>
+        <li data-attr="show" data-target=".tabsWrap" data-filter="admin" class="filterGridItems changeData">Administrators <span class="badgeLike">1</span></li>
+        <li data-attr="show" data-target=".tabsWrap" data-filter="member" class="filterGridItems changeData">Members <span class="badgeLike">0</span></li>
+        <li data-attr="show" data-target=".tabsWrap" data-filter="invite" class="filterGridItems changeData">Invitations <span class="badgeLike">0</span></li>
+      </ul>
+    </div>
+
+    <div class="organisationsGridCards">
+
+      <div class="addPeople grids">
+        <div class="infoMessage"></div>
+        <div class="teamApisListFilter filterLayer">
+          <span class="magnifyGlass vIco vLoupe vLight2State"></span>
+          <input type="text" size="47" data-list=".profilesList &gt; li.userCard.listItem" data-fresh="1" data-playevents="1" data-childs=".userName" data-toggle-class="hidden" class="filterInput teamApisListFilterInput" placeholder="Search Projects">
+        </div>
+      </div>
+
+      <div class="tabsWrap" data-show="all"><ul data-menu=".organisationsGridMenu" class="profilesList userCard list grids">
+
+                              <li class="userCard listItem" data-selfie="1" data-role="admin" data-type="Admin" data-id="54087cd6b9cc1d02000010b3">
+    <div class="userCardFront">
+    <figure class="userAvatar">
+      <img src="https://avatars.githubusercontent.com/u/37480?s=70&amp;d=https%3A%2F%2Flelylan.a.ssl.fastly.net%2Fassets%2Fimages%2Fdefault_user_avatar-8f601fa59d98081b.png" height="70" width="70" />
+    </figure>
+    <span class="userName">
+    <b class="block">Andrea Reginato</b>
+      <a href="mailto:andrea.reginato@gmail.com">andrea.reginato@gmail.com</a>
+    </span>
+    <span class="infoIco opposite icon-star hintMe" title="Admin"></span>
+
+    </div></li>
+
+        <li class="userCardBlankSlate">
+          <span class="switchByDataAttr" data-role="all">
+            <i class="vIco vPeople vDefaultState"></i><br>
+            <strong>You have no members at the moment</strong>
+            Click on Add Members to invite them.
+          </span>
+          <span class="switchByDataAttr" data-role="member">
+            <i class="vIco vEmpty"></i><br>
+            Members can by default edit Team API Blueprints.
+          </span>
+          <span class="switchByDataAttr" data-role="admin">
+            <i class="vIco vEmpty"></i><br>
+            Admins of the Team are able to <!-- change Team Settings &amp;  --> manage Team Members.
+          </span>
+          <span class="switchByDataAttr" data-type="Invite">
+            <i class="vIco vEmpty"></i><br>
+            There are no pending Team Invitations.<br>
+            Click on Add Members to invite new members.
+          </span>
+        </li>
+
+            <li class="userCard userCardMenu okMenu inactiveMenu">
+          <ul>
+            <li class="dropdownListItem onlyMember morphAdmin"><a class="dropdownLink" data-csrftoken="ApxCFSixIDOotGpS2Uwa7Mfj%2FGZRVsm0DH6g4%3D" data-type="POST" data-target-role="Admin" href="/organisations/manage/544505122aacbe020000001c/people/promote/">Promote to Admin</a></li>
+            <li class="dropdownListItem onlyAdmin morphMember"><a class="dropdownLink" data-csrftoken="ApxCFSixIDOotGpS2Uwa7Mfj%2FGZRVsm0DH6g4%3D" data-type="POST" data-target-role="Member" href="/organisations/manage/544505122aacbe020000001c/people/demote/">Demote to Member</a></li>
+            <li class="dropdownListItem onlyAdmin removeAdmin"><a class="dropdownLink" data-csrftoken="ApxCFSixIDOotGpS2Uwa7Mfj%2FGZRVsm0DH6g4%3D" data-type="DELETE" href="/organisations/manage/544505122aacbe020000001c/people/remove/admin/">Remove Admin</a></li>
+            <li class="dropdownListItem onlyMember removeMember"><a class="dropdownLink" data-csrftoken="ApxCFSixIDOotGpS2Uwa7Mfj%2FGZRVsm0DH6g4%3D" data-type="DELETE" href="/organisations/manage/544505122aacbe020000001c/people/remove/member/">Remove Member</a></li>
+            <li class="dropdownListItem onlyInvite resendInvite"><a class="dropdownLink" data-csrftoken="ApxCFSixIDOotGpS2Uwa7Mfj%2FGZRVsm0DH6g4%3D" data-type="POST" href="/organisations/manage/544505122aacbe020000001c/people/resend/">Resend invitation mail</a></li>
+            <li class="dropdownListItem onlyInvite removeInvite"><a class="dropdownLink" data-csrftoken="ApxCFSixIDOotGpS2Uwa7Mfj%2FGZRVsm0DH6g4%3D" data-type="GET" href="/organisations/invitations/544505122aacbe020000001c/decline/">Cancel invitation</a></li>
+          </ul>
+        </li>
+      </ul></div>
+    </div>
+
+    </div></div>
+
+  </div>
+
+
+
+    <!-- build:js(.) scripts/oldieshim.js -->
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
+    <![endif]-->
+    <!-- endbuild -->
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+    <!-- endbuild -->
+</body>
+</html>
+
+<!--<div ng-view=""></div>-->
