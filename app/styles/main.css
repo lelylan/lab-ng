@@ -4328,7 +4328,7 @@ position: absolute;
 left: 55%;
 top: 30px;
 margin: 0;
-color: #8a97b1
+color: #333
 }
 .teamApisListWrap .teamApisGithubIco,.teamSettingsWrap .teamApisGithubIco {
 display: inline-block;
@@ -4580,7 +4580,7 @@ padding-top: 10px;
 font-size: 12px
 }
 .teamSettings .teamBoxHeading {
-color: #8a97b1;
+color: #333;
 font-weight: bold;
 margin: 0;
 text-transform: uppercase;
@@ -4591,6 +4591,15 @@ font-family: TitilliumText,Helvetica,Arial,sans-serif
 .teamSettings .teamBoxHeadingSection {
 padding-top: 60px
 }
+.formBox {
+  padding-bottom: 10px !important;
+  margin-left: 0 !important;
+}
+.formInputBox {
+  margin-bottom: 30px;
+  width: 50% !important;
+}
+
 .teamSettings .teamSettingsHeading {
 font-weight: bold;
 margin: 0;
@@ -4601,7 +4610,7 @@ color: #3c4151
 .teamSettings .teamSettingsAbout {
 margin: 5px 0 0;
 padding: 0;
-color: #8a97b1;
+color: #333;
 font-size: 14px;
 line-height: 150%;
 }
@@ -4611,7 +4620,7 @@ padding-right: 70px
 .teamSettings .teamSettingsAboutGithub {
 margin: 5px 0 0 20px;
 padding: 0;
-color: #8a97b1;
+color: #333;
 font-size: 14px;
 line-height: 150%
 }
@@ -4936,6 +4945,7 @@ color: #fff;
 font-family: 'Proxima Nova',Helvetica,Arial,sans-serif
 }
 #container .flatButton {
+cursor: pointer;
 width: auto;
 padding: 14px 15px 12px;
 min-width: 145px;
