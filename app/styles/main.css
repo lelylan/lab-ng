@@ -468,7 +468,7 @@ border-radius: 16px;
 border: none;
 -webkit-box-shadow: none;
 box-shadow: none;
-background-color: #2fca84;
+background-color: #239cbb;
 cursor: pointer;
 -webkit-transition-property: background-color;
 -moz-transition-property: background-color;
@@ -3998,6 +3998,32 @@ text-shadow: none
   border: 1px solid #e6e6e6;
 }
 
+.owner-actions {
+  position: absolute;
+  top: 0;
+  margin: 11px 0 0 5px;
+}
+
+.owner-action {
+  padding: 6px 10px;
+  background-color: rgba(35, 156, 187, 0.75);
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.delete-action {
+  padding: 6px 10px;
+  background-color: rgba(202, 47, 47, 0.75);
+}
+
+.owner-action,
+.owner-action a,
+.owner-action a:hover {
+  color: #fff;
+}
+
+
 
 
 
@@ -4217,7 +4243,7 @@ filter: alpha(opacity=40);
 vertical-align: middle
 }
 .teamApisListWrap .flatButton:hover,.teamSettingsWrap .flatButton:hover,.teamApisListWrap .createApi:hover,.teamSettingsWrap .createApi:hover,.teamApisListWrap .flatButton:focus,.teamSettingsWrap .flatButton:focus,.teamApisListWrap .createApi:focus,.teamSettingsWrap .createApi:focus {
-background-color: #2fca84;
+background-color: #239cbb;
 color: #fff;
 }
 .teamApisListWrap .flatButton:hover .vIco,.teamSettingsWrap .flatButton:hover .vIco,.teamApisListWrap .createApi:hover .vIco,.teamSettingsWrap .createApi:hover .vIco,.teamApisListWrap .flatButton:focus .vIco,.teamSettingsWrap .flatButton:focus .vIco,.teamApisListWrap .createApi:focus .vIco,.teamSettingsWrap .createApi:focus .vIco {
@@ -4229,7 +4255,7 @@ filter: none
 background-color: #49cc90
 }
 .teamApisListWrap .flatGreen,.teamSettingsWrap .flatGreen {
-background-color: #2fca84;
+background-color: #239cbb;
 color: #fff
 }
 .teamApisListWrap .teamApisList,.teamSettingsWrap .teamApisList {

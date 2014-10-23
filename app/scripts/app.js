@@ -28,6 +28,14 @@ angular
         templateUrl: 'views/create.html',
         controller: 'CreateCtrl'
       })
+      .when('/edit/id', {
+        templateUrl: 'views/edit.html',
+        controller: 'EditCtrl'
+      })
+      .when('/delete/:id', {
+        templateUrl: 'views/delete.html',
+        controller: 'DeleteCtrl'
+      })
       .when('/projects/all', {
         templateUrl: 'views/projects.html',
         controller: 'ProjectsCtrl'

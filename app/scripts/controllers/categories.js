@@ -8,5 +8,6 @@
  * Controller of the labNgApp
  */
 angular.module('labNgApp')
-  .controller('CategoriesCtrl', function ($scope) {
+  .controller('CategoriesCtrl', function ($scope, $rootScope) {
+    $rootScope.page = 'categories';
   });

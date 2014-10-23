@@ -8,5 +8,6 @@
  * Controller of the labNgApp
  */
 angular.module('labNgApp')
-  .controller('CreateCtrl', function ($scope, $routeParams) {
+  .controller('CreateCtrl', function ($scope, $rootScope) {
+    $rootScope.page = 'create';
   });

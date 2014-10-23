@@ -26,6 +26,17 @@
         <i class="fa fa-external-link"></i>
         <a href="#" target="_blank">Learn how to make it yourself</a>
         </p>
+
+        <p class="owner-actions" ng-if="page=='yours'">
+          <a class="edit-action owner-action" href="#edit/id">
+            <i class="fa fa-external-link"></i>
+            Edit
+          </a>
+          <a class="delete-action owner-action" href="#delete/id">
+            <i class="fa fa-external-link"></i>
+            Delete
+          </a>
+        </p>
       </div>
       </li>
 
@@ -48,6 +59,17 @@
         <p class="link" >
         <i class="fa fa-external-link"></i>
         <a href="#">Learn how to make it yourself</a>
+        </p>
+
+        <p class="owner-actions" ng-if="page=='yours'">
+          <a class="edit-action owner-action" href="#project/id/edit">
+            <i class="fa fa-external-link"></i>
+            Edit
+          </a>
+          <a class="delete-action owner-action" href="#project/id/delete">
+            <i class="fa fa-external-link"></i>
+            Delete
+          </a>
         </p>
       </div>
       </li>
