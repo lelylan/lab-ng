@@ -9,9 +9,11 @@
     <br>
     <ul data-menu=".organisationsGridMenu" class="profilesList item-card category-card list grids">
 
-      <li class="item-card category-card list-item" ng-repeat="tag in tags | orderBy:predicate">
-      <a class="link" href="#">{{tag.name}}</a><span class="badgeLike">{{tag.count}}</span>
-      </li>
+      <a href="#projects/{{tag.name}}" ng-repeat="tag in tags | orderBy:predicate">
+        <li class="item-card category-card list-item">
+        <span class="link">{{tag.name}}</span><span class="badgeLike">{{tag.count}}</span>
+        </li>
+      </a>
 
     </ul>
   </div>

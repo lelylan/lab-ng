@@ -13,7 +13,6 @@ angular.module('lelylan-lab')
 
     Project.all().
       success(function(data) {
-        console.log(data)
         $scope.projects = data;
       });
   });
