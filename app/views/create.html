@@ -30,7 +30,7 @@
           <textarea style="height:100px;" class="md5 semivisibleInput formInputBox" type="text" ng-model="project.description" placeholder="Project description" autocomplete="off"></textarea>
 
           <h2 class="teamBoxHeading formBox">* COVER IMAGE (250x100)</h2>
-          <input type="file" name="file" class="md5 semivisibleInput formInputBox" type="text" ng-model="project.image" placeholder="Project description" />
+          <input type="file" nv-file-select ng-model="project.image" base-sixty-four-input class="md5 semivisibleInput formInputBox" type="text" placeholder="Project description" />
 
           <h2 class="teamBoxHeading formBox">* DESCRIPTION LINK (BLOG, GITHUB PAGES, ETC.)</h2>
           <input class="md5 semivisibleInput formInputBox" type="text" ng-model="project.link" placeholder="http://lelylan.github.com/lab-projects/arduino-led" autocomplete="off">

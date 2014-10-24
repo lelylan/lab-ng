@@ -14,6 +14,7 @@ angular
     'ngRoute',
     'ngTouch',
     'oauth',
+    'naif.base64',
     'lelylan-lab.client.project',
     'lelylan-lab.client.category',
     'lelylan-lab.utils'

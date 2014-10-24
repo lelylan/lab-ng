@@ -11,6 +11,7 @@
 angular.module('lelylan-lab')
   .controller('CreateCtrl', function ($scope, $rootScope, $location, Project) {
     $rootScope.page = 'create';
+    $scope.project = {};
 
     $scope.create = function(project) {
       if (!$scope.sending) {
@@ -18,7 +19,7 @@ angular.module('lelylan-lab')
 
         Project.create(project).
           success(function(data) {
-            $location.path('/yours');
+            //$location.path('/yours');
             $scope.sending = false;
           }).
           error(function(){
@@ -26,4 +27,5 @@ angular.module('lelylan-lab')
           })
       }
     }
+
   });
