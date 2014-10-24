@@ -12,10 +12,10 @@ angular.module('lelylan-lab')
     $rootScope.page = 'categories';
 
     Category.all().
-      success(function(data, status, headers, config) {
+      success(function(data) {
         $scope.categories = data;
         console.log($scope.categories);
-      })
+      });
 
     console.log($rootScope.logged);
   });
