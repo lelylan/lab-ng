@@ -8,6 +8,12 @@
  * Controller of the lelylan-lab
  */
 angular.module('lelylan-lab')
-  .controller('YoursCtrl', function ($scope, $rootScope) {
+  .controller('YoursCtrl', function ($scope, $rootScope, Project) {
     $rootScope.page = 'yours'
+
+    Project.all().
+      success(function(data) {
+        console.log(data)
+        $scope.projects = data;
+      });
   });

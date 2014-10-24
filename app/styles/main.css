@@ -3944,6 +3944,11 @@ text-shadow: none
   content: "#";
 }
 
+.item-card .tag {
+  padding-right: 5px;
+  display: inline-block;
+}
+
 .item-card .tag,
 .item-card .tag#hover {
   font-weight: bolder;

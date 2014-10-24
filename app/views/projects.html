@@ -8,23 +8,22 @@
   <div>
     <ul data-menu=".organisationsGridMenu" class="profilesList item-card list grids">
 
-      <li class="item-card list-item" data-selfie="1" data-role="admin" data-type="Admin" data-id="54087cd6b9cc1d02000010b3">
+      <li class="item-card list-item" data-selfie="1" data-role="admin" data-type="Admin" data-id="54087cd6b9cc1d02000010b3" ng-repeat="project in projects">
       <div class="item-cardFront">
-        <img class="user-avatar" src="images/project.png"/>
-        <h1 class="title">Connect your first light to the web with Arduino</h1>
+        <img class="user-avatar" src="{{project.image}}"/>
+        <h1 class="title">{{project.name}}</h1>
         <p class="tags">
-        <a class="tag" href="#">arduino</a>
-        <a class="tag" href="#">light</a>
-        <a class="tag" href="#">mqtt</a>
+          <a class="tag" ng-repeat="tag in project.tags" href="#projects/{{tag}}">{{tag}}</a>
         </p>
         <p class="description">
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-        architecto beatae vitae dicta sunt explicabo...
+        {{project.description}}
+        <!--Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque-->
+        <!--laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi-->
+        <!--architecto beatae vitae dicta sunt explicabo...-->
         </p>
         <p class="link" >
         <i class="fa fa-external-link"></i>
-        <a href="#" target="_blank">Learn how to make it yourself</a>
+        <a href="{{project.link}}" target="_blank">Learn how to make it yourself</a>
         </p>
 
         <p class="owner-actions" ng-if="page=='yours'">
@@ -39,41 +38,6 @@
         </p>
       </div>
       </li>
-
-      <li class="item-card list-item" data-selfie="1" data-role="admin" data-type="Admin" data-id="54087cd6b9cc1d02000010b3">
-      <div class="item-cardFront">
-        <img class="user-avatar" src="images/project.png"/>
-        <h1 class="title">Connect your first light ikea light to the web with Arduino Yun</h1>
-        <p class="tags">
-        <a class="tag" href="#">arduino</a>
-        <a class="tag" href="#">light</a>
-        <a class="tag" href="#">mqtt</a>
-        <a class="tag" href="#">ikea</a>
-        <a class="tag" href="#">wifi</a>
-        </p>
-        <p class="description">
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-        architecto beatae vitae dicta sunt explicabo...
-        </p>
-        <p class="link" >
-        <i class="fa fa-external-link"></i>
-        <a href="#">Learn how to make it yourself</a>
-        </p>
-
-        <p class="owner-actions" ng-if="page=='yours'">
-          <a class="edit-action owner-action" href="#project/id/edit">
-            <i class="fa fa-external-link"></i>
-            Edit
-          </a>
-          <a class="delete-action owner-action" href="#project/id/delete">
-            <i class="fa fa-external-link"></i>
-            Delete
-          </a>
-        </p>
-      </div>
-      </li>
-
     </ul>
   </div>
 </div>

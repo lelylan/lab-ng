@@ -10,7 +10,6 @@
     "angular-route": "~1.2.0",
     "fontawesome": "~4.2.0",
     "oauth-ng": "~0.2.6",
-    "angular-file-upload": "~1.1.5",
     "angular-base64-upload": "*"
   },
   "devDependencies": {
