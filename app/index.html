@@ -14,8 +14,13 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    <style>
+      [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+        display: none !important;
+      }
+    </style>
   </head>
-  <body ng-app="lelylan-lab" ng-controller="ApplicationCtrl" class="themeDark">
+  <body ng-app="lelylan-lab" ng-controller="ApplicationCtrl" class="themeDark" ng-cloak>
 
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -95,10 +100,10 @@
       <div class="organisationsGridMenu">
         <h2 class="organisationsGridHeadline">Categories <a href="#categories" style="margin-left:28px;"> <i class="fa fa-external-link-square"></i> all</a></h2>
         <ul>
-          <a href="#projects/all"><li class="filterGridItems changeData active">All projects<span class="badgeLike">23</span></li></a>
-          <a href="#projects/hardware"><li class="filterGridItems changeData">Hardware <span class="badgeLike">12</span></li></a>
-          <a href="#projects/software"><li class="filterGridItems changeData">Software <span class="badgeLike">2</span></li></a>
-          <a href="#projects/arduino"><li class="filterGridItems changeData">Arduino <span class="badgeLike">2</span></li></a>
+          <a href="#projects/all"><li ng-class="{active: !params.tag}" class="filterGridItems changeData">All projects<span class="badgeLike">{{total}}</span></li></a>
+          <a ng-repeat="tag in menuTags | orderBy:predicate | limitTo:10" href="#projects/{{tag.name}}">
+            <li ng-class="{active: (params.tag == tag.name)}" class="filterGridItems changeData">{{tag.name}}<span class="badgeLike">{{tag.count}}</span></li>
+          </a>
         </ul><br>
 
         <ul>

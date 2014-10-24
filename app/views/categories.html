@@ -9,40 +9,8 @@
     <br>
     <ul data-menu=".organisationsGridMenu" class="profilesList item-card category-card list grids">
 
-      <li class="item-card category-card list-item">
-      <a class="link" href="#">Category</a><span class="badgeLike">23</span>
-      </li>
-
-      <li class="item-card category-card list-item">
-      <a class="link" href="#">Category</a><span class="badgeLike">23</span>
-      </li>
-
-      <li class="item-card category-card list-item">
-      <a class="link" href="#">Category</a><span class="badgeLike">23</span>
-      </li>
-
-      <li class="item-card category-card list-item">
-      <a class="link" href="#">Category</a><span class="badgeLike">23</span>
-      </li>
-
-      <li class="item-card category-card list-item">
-      <a class="link" href="#">Category</a><span class="badgeLike">23</span>
-      </li>
-
-      <li class="item-card category-card list-item">
-      <a class="link" href="#">Category</a><span class="badgeLike">23</span>
-      </li>
-
-      <li class="item-card category-card list-item">
-      <a class="link" href="#">Category</a><span class="badgeLike">23</span>
-      </li>
-
-      <li class="item-card category-card list-item">
-      <a class="link" href="#">Category</a><span class="badgeLike">23</span>
-      </li>
-
-      <li class="item-card category-card list-item">
-      <a class="link" href="#">Category</a><span class="badgeLike">23</span>
+      <li class="item-card category-card list-item" ng-repeat="tag in tags | orderBy:predicate">
+      <a class="link" href="#">{{tag.name}}</a><span class="badgeLike">{{tag.count}}</span>
       </li>
 
     </ul>

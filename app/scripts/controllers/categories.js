@@ -13,9 +13,7 @@ angular.module('lelylan-lab')
 
     Category.all().
       success(function(data) {
-        $scope.categories = data;
-        console.log($scope.categories);
+        $scope.tags = data;
       });
 
-    console.log($rootScope.logged);
   });

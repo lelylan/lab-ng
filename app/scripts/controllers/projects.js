@@ -10,12 +10,14 @@
 angular.module('lelylan-lab')
   .controller('ProjectsCtrl', function ($scope, $rootScope, $routeParams, Project) {
     $rootScope.page = 'projects';
-    $scope.params = {}
-    $scope.params.tag = $routeParams.category;
-    console.log($scope.params);
 
-    Project.all($scope.params).
+    $rootScope.params = {}
+    if ($routeParams.category && $routeParams.category!='all')
+      $rootScope.params.tag = $routeParams.category;
+
+    Project.all($rootScope.params).
       success(function(data) {
         $scope.projects = data;
       });
+
   });
