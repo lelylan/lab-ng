@@ -3891,7 +3891,7 @@ text-shadow: none
 .item-card {
   padding: 0;
   margin: 0;
-  min-height: 400px;
+  min-height: 450px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -3929,9 +3929,9 @@ text-shadow: none
   color: #333;
   font-size: 1.2em;
   line-height: 1.3em;
-  width: 90%;
   word-wrap: break-word;
   padding: 20px 10px 0px;
+  /*border-bottom: 1px solid #F6F6F6;*/
 }
 
 .item-card .tags {
@@ -3949,10 +3949,16 @@ text-shadow: none
   display: inline-block;
 }
 
+.item-card .title a,
+.item-card .title a:hover,
+.item-card .title a:visited:hover{
+  color: #239cbb;
+}
+
 .item-card .tag,
 .item-card .tag#hover {
   font-weight: bolder;
-  color: #239cbb;
+  color: #333;
 }
 
 .item-card .description {
@@ -4011,7 +4017,7 @@ text-shadow: none
 
 .owner-action {
   padding: 6px 10px;
-  background-color: rgba(35, 156, 187, 0.75);
+  background-color: rgba(21, 143, 174, 0.75);
   border-radius: 5px;
   margin-right: 10px;
   cursor: pointer;
@@ -4028,6 +4034,10 @@ text-shadow: none
   color: #fff;
 }
 
+textarea.ng-invalid.ng-dirty,
+input.ng-invalid.ng-dirty {
+  background-color: #FFDADC;
+}
 
 
 

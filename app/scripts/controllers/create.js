@@ -14,7 +14,7 @@ angular.module('lelylan-lab')
     $scope.project = {};
 
     $scope.create = function(project) {
-      if (!$scope.sending) {
+      if (!$scope.sending || $scope.form.$invalid) {
         $scope.sending = true
 
         Project.create(project).
@@ -23,6 +23,7 @@ angular.module('lelylan-lab')
             $scope.sending = false;
           }).
           error(function(){
+            $scope.errors = "You need to complete the required fields"
             $scope.sending = false;
           })
       }

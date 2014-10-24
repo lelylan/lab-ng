@@ -10,8 +10,8 @@
 
       <li class="item-card list-item" data-selfie="1" data-role="admin" data-type="Admin" data-id="54087cd6b9cc1d02000010b3" ng-repeat="project in projects">
       <div class="item-cardFront">
-        <img class="user-avatar" src="{{project.image}}"/>
-        <h1 class="title">{{project.name}}</h1>
+        <a href="{{project.link}}" target="_blank"><img class="user-avatar" src="{{project.image}}"/></a>
+        <h1 class="title"><a href="{{project.link}}" target="_blank">{{project.name}}</a></h1>
         <p class="tags">
           <a class="tag" ng-repeat="tag in project.tags" href="#projects/{{tag}}">{{tag}}</a>
         </p>
