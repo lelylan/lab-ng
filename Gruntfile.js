@@ -307,6 +307,7 @@ module.exports = function (grunt) {
             '.htaccess',
             '*.html',
             'views/{,*/}*.html',
+            'views/templates/{,*/}*.html',
             'images/{,*/}*.{webp}',
             'fonts/*'
           ]
@@ -316,7 +317,7 @@ module.exports = function (grunt) {
           dest: '<%= yeoman.dist %>/images',
           src: ['generated/*']
         }, {
-          expand: true, cwd: '/bower_components/fontawesome', src: ['fonts/*'], dest: '<%= yeoman.dist %>'
+          expand: true, cwd: 'bower_components/fontawesome', src: ['fonts/*'], dest: '<%= yeoman.dist %>'
         }]
       },
       styles: {
