@@ -4795,7 +4795,7 @@ margin: 0
 background-color: #f6f6f6
 }
 .overlay .panel.peoplePanel .item-card.list,.manageWholeTeam.peoplePanel .item-card.list {
-padding: 0 0 10px 20px
+padding: 20px 0 10px 20px
 }
 .overlay .panel.peoplePanel .item-card.list-item,.manageWholeTeam.peoplePanel .item-card.list-item {
 padding: 0;
