@@ -2,6 +2,6 @@
 
  angular.module('config', [])
 
-.constant('ENV', {name:'development',endpoint:'http://localhost:3010',credentials:{site:'http://localhost:3000',clientId:'0e9819715cce6100d8e95e734a42f94f628f91cc5934f8014b91efedb799d36e',redirectUri:'http://localhost:9000/',profileUri:'http://localhost:3000/me'}})
+.constant('ENV', {name:'production',endpoint:'http://lelylan-lab.herokuapp.com',credentials:{site:'http://people.lelylan.com',clientId:'c5297d9ad0710a3cfcd5983f369c8333c6cff60df1f2672cd5d3b2fed270c0d7',redirectUri:'http://lelylan.github.io/lab-ng',profileUri:'http://api.lelylan.com/me'}})
 
 ;

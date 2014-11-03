@@ -34,5 +34,4 @@ coverage/
 index-test.html
 
 # Build
-dist/
 dist
