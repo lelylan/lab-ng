@@ -401,7 +401,7 @@ module.exports = function (grunt) {
       },
       pages: {
         options: {
-          remote: 'git@github.com:lelylan/lab-dashboard-ng.git',
+          remote: 'git@github.com:lelylan/lab-ng.git',
           branch: 'gh-pages'
         }
       }
