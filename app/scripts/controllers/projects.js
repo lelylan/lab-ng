@@ -8,14 +8,14 @@
  * Controller of the lelylan-lab
  */
 angular.module('lelylan-lab')
-  .controller('ProjectsCtrl', function ($scope, $rootScope, $routeParams, Project) {
+  .controller('ProjectsCtrl', function ($scope, $rootScope, $routeParams, Project, ENV) {
     $rootScope.page = 'projects';
 
     $rootScope.params = {}
     if ($routeParams.category && $routeParams.category!='all')
       $rootScope.params.tag = $routeParams.category;
 
-    Project.all($rootScope.params).
+    Project.public($rootScope.params).
       success(function(data) {
         $scope.projects = data;
       });

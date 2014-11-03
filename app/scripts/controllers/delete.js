@@ -8,7 +8,18 @@
  * Controller of the lelylan-lab
  */
 angular.module('lelylan-lab')
-  .controller('DeleteCtrl', function ($scope, $rootScope, $routeParams) {
+  .controller('DeleteCtrl', function ($scope, $rootScope, $routeParams, $location, Project) {
     $rootScope.page = 'yours';
-    $scope.id = $routeParams.id;
+
+    Project.find($routeParams.id).
+      success(function(data) {
+        $scope.project = data;
+    });
+
+    $scope.delete = function() {
+      Project.delete($routeParams.id).
+        success(function(data) {
+          $location.path('/yours');
+      });
+    }
   });

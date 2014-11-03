@@ -3898,13 +3898,17 @@ text-shadow: none
   text-shadow: none;
 }
 
+li.item-card {
+  border: 1px solid #f6f6f6;
+}
+
 .item-card.list-item {
   margin: 10px 10px 0
 }
 
 .item-card .user-avatar {
   display: block;
-  width: 250px;
+  width: 248px;
   height: 100px;
   -webkit-border-radius: 5px 5px 0 0 ;
   border-radius-top: 5px 5px 0 0 ;

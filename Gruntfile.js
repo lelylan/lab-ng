@@ -346,7 +346,67 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
+    },
+
+    ngconstant: {
+      // Options for all targets
+      options: {
+        space: '  ',
+        wrap: '"use strict";\n\n {%= __ngModule %}',
+        name: 'config',
+      },
+      // Environment targets
+      development: {
+        options: {
+          dest: '<%= yeoman.app %>/scripts/config.js'
+        },
+        constants: {
+          ENV: {
+            name: 'development',
+            endpoint: 'http://localhost:3010',
+            credentials: {
+              site: 'http://localhost:3000',
+              clientId: '0e9819715cce6100d8e95e734a42f94f628f91cc5934f8014b91efedb799d36e',
+              redirectUri: 'http://localhost:9000/',
+              profileUri: 'http://localhost:3000/me'
+            }
+          }
+        }
+      },
+      production: {
+        options: {
+          dest: '<%= yeoman.app %>/scripts/config.js'
+        },
+        constants: {
+          ENV: {
+            name: 'production',
+            endpoint: 'http://lelylan-lab.herokuapp.com',
+            credentials: {
+              site: 'http://people.lelylan.com',
+              clientId: 'c5297d9ad0710a3cfcd5983f369c8333c6cff60df1f2672cd5d3b2fed270c0d7',
+              redirectUri: 'http://lelylan.github.io/lab-dashboard-ng',
+              profileUri: 'http://api.lelylan.com/me'
+            }
+          }
+        }
+      }
+    },
+
+    buildcontrol: {
+      options: {
+        dir: 'dist',
+        commit: true,
+        push: true,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      pages: {
+        options: {
+          remote: 'git@github.com:lelylan/lab-dashboard-ng.git',
+          branch: 'gh-pages'
+        }
+      }
     }
+
   });
 
 
@@ -357,6 +417,7 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
+      'ngconstant:development',
       'wiredep',
       'concurrent:server',
       'autoprefixer',
@@ -380,6 +441,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
+    'ngconstant:production',
     'wiredep',
     'useminPrepare',
     'concurrent:dist',

@@ -17,7 +17,8 @@ angular
     'naif.base64',
     'lelylan-lab.client.project',
     'lelylan-lab.client.category',
-    'lelylan-lab.utils'
+    'lelylan-lab.utils',
+    'config'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -33,9 +34,13 @@ angular
         templateUrl: 'views/create.html',
         controller: 'CreateCtrl'
       })
-      .when('/edit/id', {
+      .when('/edit/:id', {
         templateUrl: 'views/edit.html',
         controller: 'EditCtrl'
+      })
+      .when('/show/:id', {
+        templateUrl: 'views/show.html',
+        controller: 'ShowCtrl'
       })
       .when('/delete/:id', {
         templateUrl: 'views/delete.html',

@@ -1,25 +1,24 @@
-<div class="teamApisListWrap"><div class="panelLike organisationsGridLike">
-<div class="teamSettings">
+<div class="teamApisListWrap">
+  <div class="panelLike organisationsGridLike">
+  <div class="teamSettings">
+  <form ng-submit="delete()" class="grids">
+    <input type="hidden" name="_csrf" value="KYO94totqs/GbjsydOzo3SVWk7aRoHnvH9SNc=">
+    <div class="g1of4">
+      <div class="teamChangeBox">
+        <h2 class="teamBoxHeading">DELETE YOUR PROJECT</h2>
+      </div>
+    </div>
+    <div class="g3of4">
+      <div class="teamChangeBox teamPaddedBox">
 
-<form action="https://login.apiary.io/organisations/manage/544505122aacbe020000001c/settings/edit" method="post" class="grids">
-<input type="hidden" name="_csrf" value="KYO94totqs/GbjsydOzo3SVWk7aRoHnvH9SNc=">
-<div class="g1of4">
-  <div class="teamChangeBox">
-    <h2 class="teamBoxHeading">DELETE YOUR PROJECT</h2>
-  </div>
-</div>
-<div class="g3of4">
-  <div class="teamChangeBox teamPaddedBox">
+        <h2 class="teamBoxHeading formBox">You are going to delete</h2>
+        <input class="md5 semivisibleInput formInputBox" ng-model="project.name" type="text" disabled id="team_email" name="team_email" placeholder="Project title" value="" autocomplete="off">
 
-  <h2 class="teamBoxHeading formBox">You are going to delete</h2>
-  <input class="md5 semivisibleInput formInputBox" type="text" disabled id="team_email" name="team_email" placeholder="Project title" value="" autocomplete="off">
+        <p class="grids flatButtonLine">
+        <button class="flatButton flatGreen" style="background-color:#BB2323" type="submit">Delete</button>
+        </p>
 
-  <p class="grids flatButtonLine">
-    <button class="flatButton flatGreen" style="background-color:#BB2323" type="submit">Delete</button>
-  </p>
-
-  </div>
-</div>
-</form>
-
+      </div>
+    </div>
+  </form>
 </div>

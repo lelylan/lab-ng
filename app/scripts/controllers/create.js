@@ -19,7 +19,7 @@ angular.module('lelylan-lab')
 
         Project.create(project).
           success(function(data) {
-            //$location.path('/yours');
+            $location.path('/show/' + data.id);
             $scope.sending = false;
           }).
           error(function(){
@@ -28,5 +28,4 @@ angular.module('lelylan-lab')
           })
       }
     }
-
   });

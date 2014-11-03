@@ -33,7 +33,7 @@
         <div class="wholeMenu menuRow">
 
           <div role="banner" class="lelylanLogo menuCell">
-            <a class="absFg" title="lelylan Ltd." href="http://lelylan.com/">
+            <a class="absFg" title="lelylan Ltd." href="/">
               <span class="visuallyhidden">Lelylan Lab</span>
             </a>
           </div>
@@ -81,11 +81,10 @@
           <div class="secondaryNav switcherWrap menuCell">
             <div class="switcherToggle">
               <oauth
-                site="http://localhost:3000"
-                client-id="0e9819715cce6100d8e95e734a42f94f628f91cc5934f8014b91efedb799d36e"
-                redirect-uri="http://localhost:9000/"
-                profile-uri="http://localhost:3000/me"
-                scope="devices">
+                site="{{credentials.site}}"
+                client-id="{{credentials.clientId}}"
+                redirect-uri="{{credentials.redirectUri}}"
+                profile-uri="{{credentials.profileUri}}">
               </oauth>
             </div>
           </div>
@@ -143,6 +142,7 @@
     <script src="scripts/controllers/projects.js"></script>
     <script src="scripts/controllers/categories.js"></script>
     <script src="scripts/controllers/yours.js"></script>
+    <script src="scripts/controllers/show.js"></script>
     <script src="scripts/controllers/create.js"></script>
     <script src="scripts/controllers/edit.js"></script>
     <script src="scripts/controllers/delete.js"></script>
@@ -150,11 +150,14 @@
     <script src="scripts/client/utils/utils.js"></script>
     <script src="scripts/client/services/project.js"></script>
     <script src="scripts/client/services/category.js"></script>
+    <script src="scripts/config.js"></script>
     <!-- endbuild -->
 
-    <!--angular.module('lelylan-lab').config(function(lelylanLabClientConfigProvider) {-->
-      <!--lelylanLabClientConfigProvider.configure({ endpoint: 'http://localhost:3010' });-->
-    <!--});-->
+    <script>
+    angular.module('lelylan-lab').config(function(lelylanLabClientConfigProvider, ENV) {
+      lelylanLabClientConfigProvider.configure({ endpoint: ENV.endpoint });
+    });
+    </script>
 
 </body>
 </html>

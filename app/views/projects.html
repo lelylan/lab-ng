@@ -1,14 +1,14 @@
   <div class="addPeople grids">
     <div class="infoMessage"></div>
     <div class="teamApisListFilter filterLayer">
-      <input type="text" size="47" data-list=".profilesList &gt; li.item-card.list-item" data-fresh="1" data-playevents="1" data-childs=".userName" data-toggle-class="hidden" class="filterInput teamApisListFilterInput" placeholder="Search Project">
+      <input type="text" size="47" class="filterInput teamApisListFilterInput" placeholder="Search Project">
     </div>
   </div>
 
   <div>
-    <ul data-menu=".organisationsGridMenu" class="profilesList item-card list grids">
+    <ul class="profilesList item-card list grids">
 
-      <li class="item-card list-item" data-selfie="1" data-role="admin" data-type="Admin" data-id="54087cd6b9cc1d02000010b3" ng-repeat="project in projects">
+      <li class="item-card list-item" ng-repeat="project in projects">
       <div class="item-cardFront">
         <a href="{{project.link}}" target="_blank"><img class="user-avatar" src="{{project.image}}"/></a>
         <h1 class="title"><a href="{{project.link}}" target="_blank">{{project.name}}</a></h1>
@@ -27,11 +27,11 @@
         </p>
 
         <p class="owner-actions" ng-if="page=='yours'">
-          <a class="edit-action owner-action" href="#edit/id">
+        <a class="edit-action owner-action" href="#edit/{{project.id}}">
             <i class="fa fa-external-link"></i>
             Edit
           </a>
-          <a class="delete-action owner-action" href="#delete/id">
+          <a class="delete-action owner-action" href="#delete/{{project.id}}">
             <i class="fa fa-external-link"></i>
             Delete
           </a>
